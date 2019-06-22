@@ -13,3 +13,10 @@ gitacp() {
 
 alias gcp='gitacp'
 alias ..="cd .."
+
+# The calculator
+alias calc='qalc'
+
+# CPP ctags
+alias ctagspp='ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R .'
+
