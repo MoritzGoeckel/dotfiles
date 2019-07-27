@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 "scriptencoding utf-8
 "set encoding=utf-8
 
@@ -16,7 +18,8 @@ set ignorecase
 set number
 
 " Syntax highlighting
-set syntax
+" set syntax
+syntax on
 
 "Enables cursor line position tracking:
 set cursorline
@@ -60,3 +63,12 @@ function! TrimWhiteSpace()
    %s/\s*$//
    ''
 endfunction
+
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
+"set runtimepath^=~/.vim/bundle/fugitive.vim
+"set runtimepath^=~/.vim/bundle/fswitch.vim
+
+let g:ctrlp_map = '<c-p>' " Open ctrlp, ctrl-o for open file
+let g:ctrlp_cmd = 'CtrlP'
+
+map <silent> <C-H> :FSHere<CR>
