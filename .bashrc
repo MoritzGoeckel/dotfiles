@@ -20,3 +20,5 @@ alias calc='qalc'
 # CPP ctags
 alias ctagspp='ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R .'
 
+alias ll='ls -a'
+alias oo='xdg-open'
