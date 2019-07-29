@@ -22,3 +22,4 @@ alias ctagspp='ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C+
 
 alias ll='ls -a'
 alias oo='xdg-open'
+alias web='lynx'
