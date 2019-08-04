@@ -72,3 +72,6 @@ let g:ctrlp_map = '<c-p>' " Open ctrlp, ctrl-o for open file
 let g:ctrlp_cmd = 'CtrlP'
 
 map <silent> <C-H> :FSHere<CR>
+
+"Make scrolling follow cursor
+set so=999
