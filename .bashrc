@@ -24,4 +24,4 @@ alias ll='ls -a'
 alias oo='xdg-open'
 alias web='lynx'
 
-" git config --global core.editor "vim"
+git config --global core.editor 'vim'
