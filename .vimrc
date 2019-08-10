@@ -3,6 +3,8 @@ execute pathogen#infect()
 "scriptencoding utf-8
 "set encoding=utf-8
 
+colo two-firewatch
+
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -26,7 +28,7 @@ set cursorline
 " Removes the underline causes by enabling cursorline:
 highlight clear CursorLine
 " Sets the line numbering to red background:
-highlight CursorLineNR ctermbg=green ctermfg=black
+highlight CursorLineNR ctermbg=yellow ctermfg=black
 
 " Cursor color: Does not work
 "highlight Cursor guifg=white guibg=black
