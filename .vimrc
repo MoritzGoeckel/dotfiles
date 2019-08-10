@@ -3,6 +3,7 @@ execute pathogen#infect()
 "scriptencoding utf-8
 "set encoding=utf-8
 
+" firewatch color scheme
 colo two-firewatch
 
 filetype plugin indent on
@@ -18,6 +19,9 @@ set ignorecase
 
 " Line numbering
 set number
+
+" always keep 15 lines at top and bottom
+set so=15
 
 " Syntax highlighting
 " set syntax
@@ -77,3 +81,22 @@ map <silent> <C-H> :FSHere<CR>
 
 "Make scrolling follow cursor
 set so=999
+
+" no underline in tabs
+highlight TabLine cterm=None ctermfg=white ctermbg=black
+
+" Filling where there are no tabs
+highlight TabLineFill ctermfg=black ctermbg=black
+
+" selected tab
+highlight TabLineSel ctermfg=white ctermbg=darkgrey
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
+
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
