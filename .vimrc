@@ -89,7 +89,7 @@ highlight TabLine cterm=None ctermfg=white ctermbg=black
 highlight TabLineFill ctermfg=black ctermbg=black
 
 " selected tab
-highlight TabLineSel ctermfg=white ctermbg=darkgrey
+highlight TabLineSel ctermfg=black ctermbg=grey
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
