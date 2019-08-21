@@ -100,3 +100,7 @@ nmap s <Plug>(easymotion-overwin-f2)
 
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Start Limelight when starting goyo (not supported in some terminals)
+"autocmd! User GoyoEnter Limelight
+"autocmd! User GoyoLeave Limelight!
