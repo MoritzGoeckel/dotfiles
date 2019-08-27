@@ -29,10 +29,12 @@ syntax on
 
 "Enables cursor line position tracking:
 set cursorline
-" Removes the underline causes by enabling cursorline:
-highlight clear CursorLine
+
 " Sets the line numbering to red background:
 highlight CursorLineNR ctermbg=yellow ctermfg=black
+
+" Removes the underline causes by enabling cursorline:
+highlight clear CursorLine
 
 " Cursor color: Does not work
 "highlight Cursor guifg=white guibg=black
