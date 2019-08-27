@@ -82,7 +82,7 @@ let g:ctrlp_cmd = 'CtrlP'
 map <silent> <C-H> :FSHere<CR>
 
 "Make scrolling follow cursor
-set so=999
+set so=17
 
 " no underline in tabs
 highlight TabLine cterm=None ctermfg=white ctermbg=black
