@@ -104,3 +104,5 @@ map <Leader>k <Plug>(easymotion-k)
 " Start Limelight when starting goyo (not supported in some terminals)
 "autocmd! User GoyoEnter Limelight
 "autocmd! User GoyoLeave Limelight!
+
+" set backspace=indent,eol,start
