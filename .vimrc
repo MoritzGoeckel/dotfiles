@@ -4,7 +4,7 @@ execute pathogen#infect()
 "set encoding=utf-8
 
 " firewatch color scheme
-colo two-firewatch
+colo my_colors
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
