@@ -7,3 +7,5 @@
 - Git commands      :Gstatus, Gpush, Gcommit ...
 - Distraction less  :Goyo
 - Highlight line    :Limelight / Limelight!
+
+Font: Source Code Pro Medium
