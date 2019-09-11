@@ -8,4 +8,4 @@
 - Distraction less  :Goyo
 - Highlight line    :Limelight / Limelight!
 
-Font: Source Code Pro Medium
+Font: Source Code Pro Medium, PXPlus IBM BIOS Regular, PxPlus IBM VGA8 Regular
