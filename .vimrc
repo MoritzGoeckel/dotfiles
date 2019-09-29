@@ -7,6 +7,8 @@ function! TrimWhiteSpace()
 endfunction
 
 function! s:doSettings()
+    set laststatus=1
+
     "scriptencoding utf-8
     "set encoding=utf-8
 
