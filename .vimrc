@@ -123,6 +123,12 @@ function! s:doSettings()
     " Highlighting priority (default: 10)
     "   Set it to -1 not to overrule hlsearch
     let g:limelight_priority = 10
+    
+    " MD
+	 let g:vim_markdown_auto_insert_bullets = 0
+	 let g:vim_markdown_new_list_item_indent = 0
+	 let g:vim_markdown_folding_level = 6
+	 set foldlevel=20
 endfunction
 
 function! s:goyo_enter()
