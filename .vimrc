@@ -124,8 +124,14 @@ function! s:doSettings()
     "   Set it to -1 not to overrule hlsearch
     let g:limelight_priority = 10
     
-    set foldlevel=20
-    let g:pandoc#spell#enabled = 0
+    " MD
+	 set foldlevel=20
+	 let g:pandoc#spell#enabled = 0
+	
+	 " preventing the conceal feature
+	 set conceallevel=0
+	 set cole=0
+	 au FileType * setl cole=0
 endfunction
 
 function! s:goyo_enter()
