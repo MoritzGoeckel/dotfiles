@@ -125,6 +125,7 @@ function! s:doSettings()
     let g:limelight_priority = 10
     
     set foldlevel=20
+    set nospell
 endfunction
 
 function! s:goyo_enter()
