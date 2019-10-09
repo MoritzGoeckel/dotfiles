@@ -125,13 +125,16 @@ function! s:doSettings()
     let g:limelight_priority = 10
     
     " MD
-	 set foldlevel=20
-	 let g:pandoc#spell#enabled = 0
+    set foldlevel=20
+    let g:pandoc#spell#enabled = 0
 	
-	 " preventing the conceal feature
-	 set conceallevel=0
-	 set cole=0
-	 au FileType * setl cole=0
+    " preventing the conceal feature
+    set conceallevel=0
+    set cole=0
+    au FileType * setl cole=0
+	 
+    "type 8*7<ctrl+a> to get 8*7=56
+    ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 endfunction
 
 function! s:goyo_enter()
