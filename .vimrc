@@ -135,6 +135,12 @@ function! s:doSettings()
 	 
     "type 8*7<ctrl+a> to get 8*7=56
     ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
+    
+    "press f5 to insert date
+    " normal mode
+    :nnoremap <F5> "=strftime("%c")<CR>P
+    " insert mode
+    :inoremap <F5> <C-R>=strftime("%c")<CR>
 endfunction
 
 function! s:goyo_enter()
