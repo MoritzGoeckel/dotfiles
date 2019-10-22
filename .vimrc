@@ -41,7 +41,7 @@ function! s:doSettings()
     " Removes the underline causes by enabling cursorline:
     highlight clear CursorLine
     " Sets the line numbering to red background:
-    highlight CursorLineNR ctermbg=yellow ctermfg=black
+    highlight CursorLineNR ctermbg=82 ctermfg=black
 
     " Cursor color: Does not work
     "highlight Cursor guifg=white guibg=black
