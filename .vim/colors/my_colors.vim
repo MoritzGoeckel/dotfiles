@@ -72,7 +72,7 @@ hi Special guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=39 ctermbg=NONE cte
 hi LineNr guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=15 cterm=NONE
 hi PMenuSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=15 cterm=NONE
-hi Search guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=232 ctermbg=82 cterm=bold
+hi Search guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=0 ctermbg=82 cterm=bold
 hi Delimiter guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi Statement guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 
@@ -117,12 +117,12 @@ hi Union guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cter
 hi DiffDelete guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=196 cterm=NONE
 hi Visual guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=232 ctermbg=243 cterm=bold
 hi Type guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
-hi DiffChange guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=82 cterm=NONE
+hi DiffChange guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=0 ctermbg=82 cterm=NONE
 hi Cursor guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=10 cterm=bold
 hi PMenu guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
 hi Tag guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi PMenuThumb guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
-hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=82 cterm=NONE
+hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=0 ctermbg=82 cterm=NONE
 hi DiffAdd guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=10 cterm=NONE
 hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=232 cterm=NONE
 hi cursorim guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=10 cterm=NONE
