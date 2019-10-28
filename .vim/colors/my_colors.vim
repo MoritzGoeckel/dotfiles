@@ -12,7 +12,7 @@ let g:colors_name = "my_colors"
 "hi IncSearch -- no settings --
 "hi WildMenu -- no settings --
 "hi SignColumn -- no settings --
-hi Title guifg=#ffffff guibg=#000000 guisp=#000000 gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
+hi Title guifg=#ffffff guibg=#000000 guisp=#000000 gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
 "hi Folded -- no settings --
 "hi PreCondit -- no settings --
 "hi Include -- no settings --
@@ -24,8 +24,8 @@ hi Title guifg=#ffffff guibg=#000000 guisp=#000000 gui=NONE ctermfg=15 ctermbg=N
 "hi Ignore -- no settings --
 "hi Conditional -- no settings --
 "hi StorageClass -- no settings --
-hi Normal guifg=#ffffff guibg=#000000 guisp=#000000 gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-hi normal guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
+hi Normal guifg=#ffffff guibg=#000000 guisp=#000000 gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
+hi normal guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
 "hi Label -- no settings --
 "hi CTagsImport -- no settings --
 "hi CTagsGlobalVariable -- no settings --
@@ -62,38 +62,40 @@ hi normal guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=15 ctermbg=NONE cter
 "hi clear -- no settings --
 "hi default -- no settings --
 hi Typedef guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
-hi TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=15 ctermbg=237 cterm=NONE
-hi DiffText guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=15 ctermbg=21 cterm=NONE
+hi TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=237 cterm=NONE
+hi DiffText guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=21 cterm=NONE
 hi Debug guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi PMenuSbar guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=102 cterm=NONE
 hi Identifier guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=196 ctermbg=NONE cterm=NONE
 hi SpecialChar guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi Special guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=39 ctermbg=NONE cterm=NONE
-hi LineNr guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-hi StatusLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=15 cterm=NONE
-hi PMenuSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=15 cterm=NONE
-hi Search guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=0 ctermbg=82 cterm=bold
+hi LineNr guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
+hi StatusLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=255 cterm=NONE
+hi PMenuSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=255 cterm=NONE
+
+hi Search guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=16 ctermbg=82 cterm=bold
+
 hi Delimiter guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi Statement guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 
-hi Todo guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=82 ctermbg=0 cterm=NONE
+hi Todo guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=82 ctermbg=16 cterm=NONE
 
 hi Comment guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=102 ctermbg=NONE cterm=NONE
 hi SpecialComment guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=102 ctermbg=NONE cterm=NONE
 hi doxygencomment guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=102 ctermbg=NONE cterm=NONE
 hi comment guifg=NONE guibg=NONE guisp=NONE gui=italic ctermfg=102 ctermbg=NONE cterm=NONE
 
-hi Float guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi Number guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
+hi Float guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi Number guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
 
-hi String guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi perlspecialstring guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi stringdelimiter guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi string guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi phpstringdouble guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi javascriptstrings guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi htmlstring guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi phpstringsingle guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
+hi String guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi perlspecialstring guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi stringdelimiter guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi string guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi phpstringdouble guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi javascriptstrings guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi htmlstring guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
+hi phpstringsingle guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=34 ctermbg=NONE cterm=NONE
 
 hi Boolean guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=39 ctermbg=NONE cterm=NONE
 hi Constant guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=39 ctermbg=NONE cterm=NONE
@@ -104,31 +106,30 @@ hi pythonbuiltin guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=39 ctermbg=NO
 hi PreProc guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=249 ctermbg=NONE cterm=NONE
 hi pythonimport guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=249 ctermbg=NONE cterm=NONE
 
-hi Operator guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
-hi pythonoperator guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
+hi Operator guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=NONE
+hi pythonoperator guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=NONE
 
-hi pythonbuiltinfunction guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
-hi function guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
-hi Function guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
+hi pythonbuiltinfunction guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=NONE
+hi function guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=NONE
+hi Function guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=NONE
 
-hi pythonexception guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
+hi pythonexception guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=NONE
 
 " Selection
-hi Visual guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=0 ctermbg=15 cterm=bold
+hi Visual guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=16 ctermbg=255 cterm=bold
 
 hi Union guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi DiffDelete guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=196 cterm=NONE
-
 hi Type guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
-hi DiffChange guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=0 ctermbg=82 cterm=NONE
-hi Cursor guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=10 cterm=bold
+hi DiffChange guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=16 ctermbg=82 cterm=NONE
+hi Cursor guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=46 cterm=bold
 hi PMenu guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
 hi Tag guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi PMenuThumb guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
-hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=0 ctermbg=82 cterm=NONE
-hi DiffAdd guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=10 cterm=NONE
+hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=16 ctermbg=82 cterm=NONE
+hi DiffAdd guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=46 cterm=NONE
 hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=232 cterm=NONE
-hi cursorim guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=10 cterm=NONE
+hi cursorim guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=46 cterm=NONE
 hi mbenormal guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=187 ctermbg=237 cterm=NONE
 hi doxygenspecial guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi mbechanged guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=237 cterm=NONE
@@ -138,7 +139,7 @@ hi doxygensmallspecial guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=222 cte
 hi doxygenprev guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi perlspecialmatch guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=176 ctermbg=238 cterm=NONE
 hi cformat guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=176 ctermbg=238 cterm=NONE
-hi lcursor guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=6 cterm=NONE
+hi lcursor guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
 hi doxygenspecialmultilinedesc guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=130 ctermbg=NONE cterm=NONE
 hi taglisttagname guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=105 ctermbg=NONE cterm=NONE
 hi doxygenbrief guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
@@ -171,7 +172,7 @@ hi htmltagname guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=254 ctermbg=NON
 hi menu guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=230 ctermbg=17 cterm=NONE
 hi scrollbar guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=17 cterm=NONE
 hi rubyescape guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=193 ctermbg=NONE cterm=NONE
-hi mytaglistfilename guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NONE cterm=NONE
+hi mytaglistfilename guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=82 ctermbg=NONE cterm=NONE
 hi rubypseudovariable guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=114 ctermbg=NONE cterm=NONE
 hi rubyclassvariable guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=195 ctermbg=NONE cterm=NONE
 hi rubyinterpolation guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=193 ctermbg=NONE cterm=NONE
