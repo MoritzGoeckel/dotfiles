@@ -113,9 +113,12 @@ hi Function guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cte
 
 hi pythonexception guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
 
+" Selection
+hi Visual guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=0 ctermbg=15 cterm=bold
+
 hi Union guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi DiffDelete guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=196 cterm=NONE
-hi Visual guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=232 ctermbg=243 cterm=bold
+
 hi Type guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi DiffChange guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=0 ctermbg=82 cterm=NONE
 hi Cursor guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=10 cterm=bold
