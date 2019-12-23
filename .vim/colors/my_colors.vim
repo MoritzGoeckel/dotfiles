@@ -126,7 +126,7 @@ hi Cursor guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=46 cter
 hi PMenu guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
 hi Tag guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi PMenuThumb guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
-hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=16 ctermbg=82 cterm=NONE
+hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=160 ctermbg=82 cterm=NONE
 hi DiffAdd guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=232 ctermbg=46 cterm=NONE
 hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=232 cterm=NONE
 hi cursorim guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=46 cterm=NONE
