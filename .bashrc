@@ -1,3 +1,10 @@
+# Format input line and show git branch
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\t \u@\h \[\033[32m\]\w\[\033[35m\]\$(parse_git_branch)\[\033[00m\] $ "
+
 alias gitcred='git config credential.helper store'
 alias gitc='git commit -m '
 alias gita='git add -A'
