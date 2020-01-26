@@ -26,7 +26,7 @@ alias calc='qalc'
 # CPP ctags
 alias ctagspp='ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R .'
 
-alias ll='ls -a'
+alias ls='ls -Alhp --color --group-directories-first'
 alias oo='xdg-open'
 alias web='lynx'
 
