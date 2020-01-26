@@ -31,5 +31,6 @@ alias oo='xdg-open'
 alias web='lynx'
 
 git config --global core.editor 'vim'
+export SUDO_EDITOR=vim 
 
 alias gitt='git log --graph --pretty=oneline --abbrev-commit'
