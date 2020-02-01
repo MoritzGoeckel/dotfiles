@@ -38,3 +38,6 @@ alias gitt='git log --graph --pretty=oneline --abbrev-commit'
 #export PATH="your-dir:$PATH"
 
 alias show='vim - -R -m -M'
+
+export HISTCONTROL=ignoredups
+export HISTSIZE=1000
