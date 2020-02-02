@@ -141,6 +141,9 @@ function! s:doSettings()
     :nnoremap <F5> "=strftime("%c")<CR>P
     " insert mode
     :inoremap <F5> <C-R>=strftime("%c")<CR>
+    
+    "copy again after pasting
+    "xnoremap p pgvy
 endfunction
 
 function! s:goyo_enter()
