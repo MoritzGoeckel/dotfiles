@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vim-pandoc-syntax"]
 	path = .vim/bundle/vim-pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax
+[submodule ".vim/bundle/vim-find-files"]
+	path = .vim/bundle/vim-find-files
+	url = https://github.com/samoshkin/vim-find-files

@@ -7,6 +7,9 @@ function! TrimWhiteSpace()
 endfunction
 
 function! s:doSettings()
+    let g:find_files_buf_command = "tabnew"
+    let g:find_files_findprg = 'find $d -iname "*$**" ! -type d'
+
     set laststatus=1
 
     "scriptencoding utf-8
