@@ -26,11 +26,18 @@ alias calc='qalc'
 # CPP ctags
 alias ctagspp='ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R .'
 
-alias ls='ls -Alhp --color --group-directories-first'
+alias ll='ls -Alhp --color --group-directories-first'
 alias oo='xdg-open'
 alias web='lynx'
 
 git config --global core.editor 'vim'
-export SUDO_EDITOR=vim 
+export SUDO_EDITOR=vim
 
 alias gitt='git log --graph --pretty=oneline --abbrev-commit'
+
+#export PATH="your-dir:$PATH"
+
+alias show='vim - -R -m -M'
+
+export HISTCONTROL=ignoredups
+export HISTSIZE=10000

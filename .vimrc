@@ -123,24 +123,27 @@ function! s:doSettings()
     " Highlighting priority (default: 10)
     "   Set it to -1 not to overrule hlsearch
     let g:limelight_priority = 10
-    
+
     " MD
     set foldlevel=20
     let g:pandoc#spell#enabled = 0
-	
+
     " preventing the conceal feature
     set conceallevel=0
     set cole=0
     au FileType * setl cole=0
-	 
+
     "type 8*7<ctrl+a> to get 8*7=56
     ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
-    
+
     "press f5 to insert date
     " normal mode
     :nnoremap <F5> "=strftime("%c")<CR>P
     " insert mode
     :inoremap <F5> <C-R>=strftime("%c")<CR>
+
+    "copy again after pasting
+    "xnoremap p pgvy
 endfunction
 
 function! s:goyo_enter()
