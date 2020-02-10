@@ -147,6 +147,9 @@ function! s:doSettings()
 
     "copy again after pasting
     "xnoremap p pgvy
+    
+    " Go back when using *
+    nnoremap * m`:keepjumps normal! *``<cr>
 endfunction
 
 function! s:goyo_enter()
