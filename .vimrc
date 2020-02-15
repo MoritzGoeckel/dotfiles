@@ -1,5 +1,23 @@
 execute pathogen#infect()
 
+set nocompatible
+
+set path+=** " path contains all subdirs
+set wildmenu " press tab when using :find to find fuzzy, use * and tab
+             " or use :b and a substring
+
+" ignore some folders for search
+set wildignore+=**/node_modules/**
+set wildignore+=**/.git/**
+
+let g:netrw_banner=0    " disable banner
+let g:netrw_liststyle=3 " tree style
+
+set incsearch           " search before pressing enter
+set display+=lastline   " show lines even if they dont fit screen
+
+set formatoptions+=j    " remove comment char when joining lines
+
 " Removes trailing spaces
 function! TrimWhiteSpace()
    %s/\s*$//
@@ -26,18 +44,15 @@ set ignorecase
 " set syntax
 syntax on
 
+" Line numbering
+set number
+hi LineNr ctermbg=NONE ctermfg=white
+
 "Enables cursor line position tracking
 set cursorline
 highlight clear CursorLine
-highlight CursorLineNR ctermbg=green ctermfg=black
-
-" Line numbering
-set number
-hi LineNr ctermbg=black ctermfg=white
-
-" Cursor color: Does not work
-"highlight Cursor guifg=white guibg=black
-"highlight iCursor guifg=white guibg=steelblue
+highlight CursorLine cterm=NONE
+highlight CursorLineNR ctermbg=green ctermfg=black cterm=NONE
 
 " No blinking of the cursor
 set guicursor=n-v-c:block-Cursor
@@ -74,7 +89,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 " Show trailing whitespaces with signs
-set list listchars=trail:·,tab:>>
+set list listchars=trail:·,tab:»\
 
 map <silent> <C-o> :FSHere<CR>
 
@@ -82,13 +97,13 @@ map <silent> <C-o> :FSHere<CR>
 set so=999
 
 " no underline in tabs
-highlight TabLine cterm=None ctermfg=white ctermbg=black
+highlight TabLine cterm=None ctermfg=white ctermbg=NONE
 
 " Filling after tabs
-highlight TabLineFill ctermfg=black ctermbg=black
+highlight TabLineFill ctermfg=black ctermbg=NONE
 
 " Selected tab
-highlight TabLineSel ctermfg=black ctermbg=grey
+highlight TabLineSel ctermfg=black ctermbg=green
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
@@ -102,7 +117,6 @@ map <Leader>k <Plug>(easymotion-k)
 
 " MD
 set foldlevel=20
-let g:pandoc#spell#enabled = 0
 
 " preventing the conceal feature
 set conceallevel=0
