@@ -1,30 +1,6 @@
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule ".vim/bundle/vim-fswitch"]
 	path = .vim/bundle/vim-fswitch
 	url = https://github.com/derekwyatt/vim-fswitch
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
-[submodule ".vim/bundle/limelight.vim"]
-	path = .vim/bundle/limelight.vim
-	url = https://github.com/junegunn/limelight.vim
-[submodule ".vim/bundle/goyo.vim"]
-	path = .vim/bundle/goyo.vim
-	url = https://github.com/junegunn/goyo.vim
-[submodule ".vim/bundle/vim-pandoc"]
-	path = .vim/bundle/vim-pandoc
-	url = https://github.com/vim-pandoc/vim-pandoc
-[submodule ".vim/bundle/vim-pandoc-syntax"]
-	path = .vim/bundle/vim-pandoc-syntax
-	url = https://github.com/vim-pandoc/vim-pandoc-syntax
-[submodule ".vim/bundle/vim-find-files"]
-	path = .vim/bundle/vim-find-files
-	url = https://github.com/samoshkin/vim-find-files

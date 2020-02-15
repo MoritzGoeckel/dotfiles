@@ -76,10 +76,6 @@ match ExtraWhitespace /\s\+$/
 " Show trailing whitespaces with signs
 set list listchars=trail:·,tab:>>
 
-let g:ctrlp_map = '<c-p>' " Open ctrlp, ctrl-o for open file
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'c'
-
 map <silent> <C-o> :FSHere<CR>
 
 "Make scrolling follow cursor
