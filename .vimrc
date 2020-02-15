@@ -6,174 +6,109 @@ function! TrimWhiteSpace()
    ''
 endfunction
 
-function! s:doSettings()
-    let g:find_files_buf_command = "tabnew"
-    let g:find_files_findprg = 'find $d -iname "*$**" ! -type d'
+set laststatus=1
 
-    set laststatus=1
+"scriptencoding utf-8
+"set encoding=utf-8
 
-    "scriptencoding utf-8
-    "set encoding=utf-8
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
-    " firewatch color scheme
-    colo my_colors
+" Searching case insensitive
+set ignorecase
 
-    filetype plugin indent on
-    " show existing tab with 4 spaces width
-    set tabstop=4
-    " when indenting with '>', use 4 spaces width
-    set shiftwidth=4
-    " On pressing tab, insert 4 spaces
-    set expandtab
+" Syntax highlighting
+" set syntax
+syntax on
 
-    " Searching case insensitive
-    set ignorecase
+"Enables cursor line position tracking
+set cursorline
+highlight clear CursorLine
+highlight CursorLineNR ctermbg=green ctermfg=black
 
-    " Line numbering
-    set number
+" Line numbering
+set number
+hi LineNr ctermbg=black ctermfg=white
 
-    " always keep 15 lines at top and bottom
-    set so=15
+" Cursor color: Does not work
+"highlight Cursor guifg=white guibg=black
+"highlight iCursor guifg=white guibg=steelblue
 
-    " Syntax highlighting
-    " set syntax
-    syntax on
+" No blinking of the cursor
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 
-    "Enables cursor line position tracking:
-    set cursorline
-    " Removes the underline causes by enabling cursorline:
-    highlight clear CursorLine
-    " Sets the line numbering to red background:
-    highlight CursorLineNR ctermbg=82 ctermfg=black
+set hlsearch
+hi Search cterm=NONE ctermfg=black ctermbg=yellow
+hi Visual cterm=NONE ctermfg=black ctermbg=green
 
-    " Cursor color: Does not work
-    "highlight Cursor guifg=white guibg=black
-    "highlight iCursor guifg=white guibg=steelblue
+hi DiffAdd      cterm=none    ctermfg=black     ctermbg=cyan
+hi DiffChange   cterm=none    ctermfg=black     ctermbg=yellow
+hi DiffDelete   cterm=none    ctermfg=black     ctermbg=red
+hi DiffText     cterm=none    ctermfg=black     ctermbg=red
 
-    " No blinking of the cursor
-    set guicursor=n-v-c:block-Cursor
-    set guicursor+=i:ver100-iCursor
-    set guicursor+=n-v-c:blinkon0
-    set guicursor+=i:blinkwait10
+" Open splits right
+set splitright
+set splitbelow
 
-    set hlsearch
+" Navigate in splits with ctrl+hjkl
+" NOT ctrl+w ctrl+hjkl
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-    " Open splits right
-    set splitright
-    set splitbelow
+" Go back when using *
+" nnoremap * *``
+nnoremap * m`:keepjumps normal! *``<cr>
 
-    " Navigate in splits with ctrl+hjkl
-    " NOT ctrl+w ctrl+hjkl
-    nnoremap <C-J> <C-W><C-J>
-    nnoremap <C-K> <C-W><C-K>
-    nnoremap <C-L> <C-W><C-L>
-    nnoremap <C-H> <C-W><C-H>
+" Show trailing whitespaces with formatting
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
-    " Show trailing whitespaces with formatting
-    highlight ExtraWhitespace ctermbg=red guibg=red
-    match ExtraWhitespace /\s\+$/
+" Show trailing whitespaces with signs
+set list listchars=trail:·,tab:>>
 
-    " Show trailing whitespaces with signs
-    set list listchars=trail:·,tab:>>
+let g:ctrlp_map = '<c-p>' " Open ctrlp, ctrl-o for open file
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'c'
 
-    "set runtimepath^=~/.vim/bundle/ctrlp.vim
-    "set runtimepath^=~/.vim/bundle/fugitive.vim
-    "set runtimepath^=~/.vim/bundle/fswitch.vim
+map <silent> <C-o> :FSHere<CR>
 
-    let g:ctrlp_map = '<c-p>' " Open ctrlp, ctrl-o for open file
-    let g:ctrlp_cmd = 'CtrlP'
+"Make scrolling follow cursor
+set so=999
 
-    map <silent> <C-H> :FSHere<CR>
+" no underline in tabs
+highlight TabLine cterm=None ctermfg=white ctermbg=black
 
-    "Make scrolling follow cursor
-    set so=999
+" Filling after tabs
+highlight TabLineFill ctermfg=black ctermbg=black
 
-    " no underline in tabs
-    highlight TabLine cterm=None ctermfg=white ctermbg=black
+" Selected tab
+highlight TabLineSel ctermfg=black ctermbg=grey
 
-    " Filling where there are no tabs
-    highlight TabLineFill ctermfg=black ctermbg=black
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
 
-    " selected tab
-    highlight TabLineSel ctermfg=black ctermbg=grey
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
 
-    let g:EasyMotion_do_mapping = 0 " Disable default mappings
-    let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
-    " `s{char}{char}{label}`
-    " Need one more keystroke, but on average, it may be more comfortable.
-    nmap s <Plug>(easymotion-overwin-f2)
+" MD
+set foldlevel=20
+let g:pandoc#spell#enabled = 0
 
-    map <Leader>j <Plug>(easymotion-j)
-    map <Leader>k <Plug>(easymotion-k)
-
-    " Limelight settings
-    " Color for cterm
-    " let g:limelight_conceal_ctermfg = 'gray'
-    let g:limelight_conceal_ctermfg = 240
-
-    let g:limelight_default_coefficient = 0.5
-
-    " Number of preceding/following paragraphs to include (default: 0)
-    let g:limelight_paragraph_span = 1
-
-    " Beginning/end of paragraph
-    "   When there's no empty line between the paragraphs
-    "   and each paragraph starts with indentation
-    let g:limelight_bop = '^\s'
-    let g:limelight_eop = '\ze\n^\s'
-
-    " Highlighting priority (default: 10)
-    "   Set it to -1 not to overrule hlsearch
-    let g:limelight_priority = 10
-
-    " MD
-    set foldlevel=20
-    let g:pandoc#spell#enabled = 0
-
-    " preventing the conceal feature
-    set conceallevel=0
-    set cole=0
-    au FileType * setl cole=0
-
-    "type 8*7<ctrl+a> to get 8*7=56
-    ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
-
-    "press f5 to insert date
-    " normal mode
-    :nnoremap <F5> "=strftime("%c")<CR>P
-    " insert mode
-    :inoremap <F5> <C-R>=strftime("%c")<CR>
-
-    "copy again after pasting
-    "xnoremap p pgvy
-    
-    " Go back when using *
-    nnoremap * m`:keepjumps normal! *``<cr>
-endfunction
-
-function! s:goyo_enter()
-  if executable('tmux') && strlen($TMUX)
-    silent !tmux set status off
-    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
-  endif
-  set noshowmode
-  set noshowcmd
-  Limelight
-endfunction
-
-function! s:goyo_leave()
-   if executable('tmux') && strlen($TMUX)
-       silent !tmux set status on
-       silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
-   endif
-   set showmode
-   set showcmd
-   Limelight!
-   call s:doSettings()
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-call s:doSettings()
+" preventing the conceal feature
+set conceallevel=0
+set cole=0
+au FileType * setl cole=0
