@@ -1,5 +1,14 @@
 execute pathogen#infect()
 
+"colo delek
+"colo my_colors
+"colo gruvbox
+"colo badwolf
+"colo jellybeans
+"colo zenburn
+"colo molokai
+colo harlequin
+
 set nocompatible
 
 set path+=** " path contains all subdirs
