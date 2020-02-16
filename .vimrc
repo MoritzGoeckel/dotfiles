@@ -98,7 +98,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 " Show trailing whitespaces with signs
-set list listchars=trail:·,tab:»\
+set list listchars=trail:·,tab:»»
 
 map <silent> <C-o> :FSHere<CR>
 
