@@ -45,6 +45,8 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+" Show trailing whitespaces with signs
+set list listchars=trail:·,tab:»»
 
 " Searching case insensitive
 set ignorecase
@@ -82,13 +84,6 @@ hi DiffText     cterm=none    ctermfg=black     ctermbg=red
 set splitright
 set splitbelow
 
-" Navigate in splits with ctrl+hjkl
-" NOT ctrl+w ctrl+hjkl
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Go back when using *
 " nnoremap * *``
 nnoremap * m`:keepjumps normal! *``<cr>
@@ -96,9 +91,6 @@ nnoremap * m`:keepjumps normal! *``<cr>
 " Show trailing whitespaces with formatting
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-
-" Show trailing whitespaces with signs
-set list listchars=trail:·,tab:»»
 
 map <silent> <C-o> :FSHere<CR>
 
@@ -131,3 +123,5 @@ set foldlevel=20
 set conceallevel=0
 set cole=0
 au FileType * setl cole=0
+
+" Use ctrl+hjkl to switch tmux and vim panes
