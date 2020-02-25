@@ -1,3 +1,6 @@
 *.swp
 *.swo
 .vim/.netrwhist
+.vim/after/syntax/cpp/epm_mds_custom.vim
+.vim/syntax/hanatrace.vim
+.vim/ftdetect/hanatrace.vim
