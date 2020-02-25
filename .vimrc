@@ -80,6 +80,13 @@ hi DiffChange   cterm=none    ctermfg=black     ctermbg=yellow
 hi DiffDelete   cterm=none    ctermfg=black     ctermbg=red
 hi DiffText     cterm=none    ctermfg=black     ctermbg=red
 
+" R's gerrit like diff
+"highlight DiffAdd      ctermfg=black   ctermbg=darkgreen
+"highlight DiffDelete   ctermfg=darkred ctermbg=black
+"highlight DiffChange   ctermfg=black   ctermbg=darkgrey
+"highlight! link DiffChange Folded
+"highlight DiffText     ctermfg=black   ctermbg=green
+
 " Open splits right
 set splitright
 set splitbelow
