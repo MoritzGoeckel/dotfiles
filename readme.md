@@ -3,10 +3,8 @@
 - Toggle comment    \ + ci | \ + cs
 - Search files      ctrl + p
 - Navigate          s + {2 letters}
-- Switch to header  ctrl + h
-- Git commands      :Gstatus, Gpush, Gcommit ...
-- Distraction less  :Goyo
-- Highlight line    :Limelight / Limelight!
+- Switch to header  ctrl + o
+- Git commands      :Gstatus, Gpush, Gcommit, Gblame, ...
 
 Font: Source Code Pro Medium, PXPlus IBM BIOS Regular, PxPlus IBM VGA8 Regular
 
@@ -20,3 +18,6 @@ use ctags -R .   find def ctrl [
 edit .           open file browser
              t   open file in tab
              v   open in split
+
+ctrl+6        open last buffer
+ctrl+hjkl     navigate splits in vim/tmux
