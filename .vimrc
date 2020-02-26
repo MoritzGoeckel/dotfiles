@@ -11,6 +11,11 @@ colo harlequin
 
 set nocompatible
 
+"Autocomplete
+set completeopt=longest ",menuone
+set complete=.,w,b "i=included files, t=tags, u=unloaded buffers, b=buffers, w=windows, .=buffer
+
+
 set path+=** " path contains all subdirs
 set wildmenu " press tab when using :find to find fuzzy, use * and tab
              " or use :b and a substring
@@ -119,8 +124,8 @@ let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
 " `s{char}{char}{label}`
 nmap s <Plug>(easymotion-overwin-f2)
 
-" MD
-set foldlevel=20
+set foldlevel=20    " folds are open in the beginning
+set fdm=indent      " folds are created by indents
 
 " preventing the conceal feature
 set conceallevel=0
@@ -128,3 +133,8 @@ set cole=0
 au FileType * setl cole=0
 
 " Use ctrl+hjkl to switch tmux and vim panes
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+"nnoremap <silent> <c-h> :TmuxNavigatePrevious<cr>
