@@ -12,9 +12,8 @@ colo harlequin
 set nocompatible
 
 "Autocomplete
-set completeopt=longest ",menuone
-set complete=.,w,b "i=included files, t=tags, u=unloaded buffers, b=buffers, w=windows, .=buffer
-
+set completeopt=longest,menu ",menuone
+set complete=.,w "i=included files, t=tags, u=unloaded buffers, b=buffers, w=windows, .=buffer
 
 set path+=** " path contains all subdirs
 set wildmenu " press tab when using :find to find fuzzy, use * and tab
@@ -104,7 +103,8 @@ nnoremap * m`:keepjumps normal! *``<cr>
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-map <silent> <C-o> :FSHere<CR>
+" using ; because of remapping
+map <silent> <C-o> ;FSHere<CR>
 
 "Make scrolling follow cursor
 set so=999
@@ -117,6 +117,9 @@ highlight TabLineFill ctermfg=black ctermbg=NONE
 
 " Selected tab
 highlight TabLineSel ctermfg=black ctermbg=green
+
+" Highlight Todos
+highlight Todo ctermfg=yellow
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
@@ -138,3 +141,16 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 "nnoremap <silent> <c-h> :TmuxNavigatePrevious<cr>
+
+hi Comment ctermfg=grey
+
+" map : to ; and vise versa to avoid some left shift'ing
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+" leave insert mode with jj
+:imap jj <Esc>
+
+set wrap

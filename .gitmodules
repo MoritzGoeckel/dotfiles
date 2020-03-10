@@ -16,3 +16,9 @@
 [submodule ".vim/bundle/vim-clang-format"]
 	path = .vim/bundle/vim-clang-format
 	url = https://github.com/rhysd/vim-clang-format
+[submodule ".vim/bundle/vim-signature"]
+	path = .vim/bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature
+[submodule ".vim/bundle/bufexplorer"]
+	path = .vim/bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
