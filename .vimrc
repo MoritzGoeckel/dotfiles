@@ -69,7 +69,7 @@ highlight clear CursorLine
 highlight CursorLine cterm=NONE
 highlight CursorLineNR ctermbg=green ctermfg=black cterm=NONE
 
-" No blinking of the cursor
+" No cursor blinking
 set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
@@ -80,8 +80,8 @@ hi Search cterm=NONE ctermfg=black ctermbg=yellow
 hi Visual cterm=NONE ctermfg=black ctermbg=green
 
 hi DiffAdd      cterm=none    ctermfg=black     ctermbg=cyan
-hi DiffChange   cterm=none    ctermfg=black     ctermbg=yellow
 hi DiffDelete   cterm=none    ctermfg=black     ctermbg=red
+hi DiffChange   cterm=none    ctermfg=black     ctermbg=yellow
 hi DiffText     cterm=none    ctermfg=black     ctermbg=red
 
 " R's gerrit like diff
@@ -154,3 +154,17 @@ vnoremap : ;
 :imap jj <Esc>
 
 set wrap
+
+" use ;FmtJSON to format file
+com! FmtJSON %!python -m json.tool
+
+" use ;FmtOneLine to bring all to one line
+com! FmtOneLine %j
+
+" use ;Erc and ;Src to edit Vimrc and source it
+com! Erc edit ~/.vimrc
+com! Src source ~/.vimrc
+
+" use clang format on save
+" let g:clang_format#command = 'path/to/clang_format'
+let g:clang_format#auto_format = 1
