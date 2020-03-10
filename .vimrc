@@ -8,6 +8,7 @@ execute pathogen#infect()
 "colo zenburn
 "colo molokai
 colo harlequin
+"colo srcery
 
 set nocompatible
 
@@ -61,12 +62,12 @@ syntax on
 
 " Line numbering
 set number
-hi LineNr ctermbg=NONE ctermfg=white
+hi LineNr ctermbg=NONE ctermfg=white cterm=NONE
 
 "Enables cursor line position tracking
 set cursorline
 highlight clear CursorLine
-highlight CursorLine cterm=NONE
+highlight CursorLine   ctermbg=NONE  ctermfg=NONE  cterm=NONE
 highlight CursorLineNR ctermbg=green ctermfg=black cterm=NONE
 
 " No cursor blinking
@@ -121,6 +122,9 @@ highlight TabLineSel ctermfg=black ctermbg=green
 " Highlight Todos
 highlight Todo ctermfg=yellow
 
+" Highlight comments
+highlight Comment ctermfg=darkgrey
+
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature
 
@@ -141,8 +145,6 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 "nnoremap <silent> <c-h> :TmuxNavigatePrevious<cr>
-
-hi Comment ctermfg=grey
 
 " map : to ; and vise versa to avoid some left shift'ing
 nnoremap ; :
