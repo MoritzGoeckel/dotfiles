@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/bufexplorer"]
 	path = .vim/bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule ".vim/bundle/vim-mark"]
+	path = .vim/bundle/vim-mark
+	url = https://github.com/inkarkat/vim-mark
+[submodule ".vim/bundle/vim-ingo-library"]
+	path = .vim/bundle/vim-ingo-library
+	url = https://github.com/inkarkat/vim-ingo-library

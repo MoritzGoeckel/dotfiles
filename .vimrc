@@ -2,12 +2,13 @@ execute pathogen#infect()
 
 "colo delek
 "colo my_colors
-"colo gruvbox
 "colo badwolf
 "colo jellybeans
 "colo zenburn
-"colo molokai
+
 colo harlequin
+"colo molokai
+"colo gruvbox
 "colo srcery
 
 set nocompatible
@@ -170,3 +171,9 @@ com! Src source ~/.vimrc
 " use clang format on save
 " let g:clang_format#command = 'path/to/clang_format'
 let g:clang_format#auto_format = 1
+
+function! GetFunctionName()
+    let fn#line_nr = search("^[^ \{\}].*","bWn")
+    let fn#line_cnt = getline(fn#line_nr)
+    echo fn#line_cnt
+endfunction
