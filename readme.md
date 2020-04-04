@@ -21,3 +21,13 @@ edit .           open file browser
 
 ctrl+6        open last buffer
 ctrl+hjkl     navigate splits in vim/tmux
+
+# Install
+
+ln -s dotfiles/.vimrc ~/.vimrc
+ln -s dotfiles/.bashrc ~/.bashrc
+ln -s dotfiles/.vim ~/.vim
+ln -s dotfiles/.tmux.conf ~/.tmux.conf
+
+git submodule init
+git submodule update
