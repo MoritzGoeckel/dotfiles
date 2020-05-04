@@ -6,7 +6,8 @@ execute pathogen#infect()
 "colo jellybeans
 "colo zenburn
 
-colo harlequin
+"colo harlequin
+colo myharlequin
 "colo molokai
 "colo gruvbox
 "colo srcery
@@ -69,7 +70,7 @@ hi LineNr ctermbg=NONE ctermfg=white cterm=NONE
 set cursorline
 highlight clear CursorLine
 highlight CursorLine   ctermbg=NONE  ctermfg=NONE  cterm=NONE
-highlight CursorLineNR ctermbg=green ctermfg=black cterm=NONE
+highlight CursorLineNR ctermbg=darkgrey ctermfg=white cterm=NONE
 
 " No cursor blinking
 set guicursor=n-v-c:block-Cursor
@@ -78,7 +79,8 @@ set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
 
 set hlsearch
-hi Search cterm=NONE ctermfg=black ctermbg=yellow
+"hi Search cterm=NONE ctermfg=black ctermbg=yellow
+"hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
 hi Visual cterm=NONE ctermfg=black ctermbg=green
 
 hi DiffAdd      cterm=none    ctermfg=black     ctermbg=cyan
@@ -118,7 +120,7 @@ highlight TabLine cterm=None ctermfg=white ctermbg=NONE
 highlight TabLineFill ctermfg=black ctermbg=NONE
 
 " Selected tab
-highlight TabLineSel ctermfg=black ctermbg=green
+highlight TabLineSel ctermfg=white ctermbg=darkgrey
 
 " Highlight Todos
 highlight Todo ctermfg=yellow
@@ -177,3 +179,10 @@ function! GetFunctionName()
     let fn#line_cnt = getline(fn#line_nr)
     echo fn#line_cnt
 endfunction
+
+" format with gq
+" tw is line width
+set tw=0
+
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv

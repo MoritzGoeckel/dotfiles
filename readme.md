@@ -31,3 +31,5 @@ ln -s dotfiles/.tmux.conf ~/.tmux.conf
 
 git submodule init
 git submodule update
+
+sudo apt install clang-format
