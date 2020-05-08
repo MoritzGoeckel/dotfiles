@@ -64,13 +64,13 @@ syntax on
 
 " Line numbering
 set number
-hi LineNr ctermbg=NONE ctermfg=white cterm=NONE
+hi LineNr ctermbg=NONE ctermfg=darkgrey cterm=NONE
 
 "Enables cursor line position tracking
 set cursorline
 highlight clear CursorLine
 highlight CursorLine   ctermbg=NONE  ctermfg=NONE  cterm=NONE
-highlight CursorLineNR ctermbg=lightgrey ctermfg=black cterm=NONE
+highlight CursorLineNR ctermbg=black ctermfg=white cterm=NONE
 
 " No cursor blinking
 set guicursor=n-v-c:block-Cursor
@@ -81,7 +81,7 @@ set guicursor+=i:blinkwait10
 set hlsearch
 "hi Search cterm=NONE ctermfg=black ctermbg=yellow
 "hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
-hi Visual cterm=NONE ctermfg=black ctermbg=green
+hi Visual cterm=NONE ctermfg=black ctermbg=white
 
 hi DiffAdd      cterm=none    ctermfg=black     ctermbg=cyan
 hi DiffDelete   cterm=none    ctermfg=black     ctermbg=red

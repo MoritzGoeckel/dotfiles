@@ -13,7 +13,8 @@ endif
 let g:colors_name = "myharlequin"
 
 let s:text = ['#F8F8F2', 15]
-let s:text_bg = ['#1C1B1A', 234]
+let s:text_bg = ['#000000', 0]
+"let s:text_bg = ['#1C1B1A', 234]
 
 let s:white = ['#FFFFFF', 15]
 let s:black = ['#000000', 0]
@@ -36,6 +37,7 @@ let s:lilac = ['#AE81FF', 141]
 
 " Blue
 let s:frost = ['#2C89C7', 68]
+let s:blue = ['#2C89C7', 6]
 
 " Yellow
 let s:sunny = ['#FFFC7F', 228]
@@ -127,13 +129,13 @@ call s:Highlight('Operator',    s:cerise, '', '', '')
 call s:Highlight('Label',       s:white, '', '', '')
 call s:Highlight('Repeat',      s:cerise, '', '', '')
 
-call s:Highlight('Type',            s:cerise, '', '', '')
-call s:Highlight('StorageClass',    s:cerise, '', '', '')
+call s:Highlight('Type',            s:greys[1], '', '', '')
+call s:Highlight('StorageClass',    s:greys[1], '', '', '')
 call s:Highlight('Structure',       s:cerise, '', '', '')
 call s:Highlight('TypeDef',         s:cerise, '', '', '')
 
 call s:Highlight('Exception',       s:white, '', '', '')
-call s:Highlight('Include',         s:cerise, '', '', '')
+call s:Highlight('Include',         s:white, '', '', '')
 
 call s:Highlight('PreProc',         s:white, '', '', '')
 call s:Highlight('Macro',           s:white, '', '', '')
@@ -150,23 +152,23 @@ call s:Highlight('Comment',         s:greys[1], '', '', '')
 call s:Highlight('CommentEmail',    s:greys[1], '', '', '')
 call s:Highlight('CommentUrl',      s:greys[1], '', '', '')
 call s:Highlight('SpecialComment',  s:greys[1], '', '', '')
-call s:Highlight('Todo',            s:greys[1], '', '', '')
+call s:Highlight('Todo',            s:gold,     '', '', '')
 
 call s:Highlight('String',          s:greys[1], '', '', '')
-call s:Highlight('SpecialKey',      s:greys[1], '', 'bold', '')
-call s:Highlight('Special',         s:greys[1], '', 'bold', '')
-call s:Highlight('SpecialChar',     s:greys[1], '', 'bold', '')
+call s:Highlight('SpecialKey',      s:greys[1], '', '', '')
+call s:Highlight('Special',         s:greys[1], '', '', '')
+call s:Highlight('SpecialChar',     s:greys[1], '', '', '')
 
-call s:Highlight('Boolean',         s:greys[1], '', 'bold', '')
-call s:Highlight('Character',       s:greys[1], '', 'bold', '')
-call s:Highlight('Number',          s:greys[1], '', 'bold', '')
-call s:Highlight('Constant',        s:greys[1], '', 'bold', '')
-call s:Highlight('Float',           s:greys[1], '', 'bold', '')
+call s:Highlight('Boolean',         s:greys[1], '', '', '')
+call s:Highlight('Character',       s:greys[1], '', '', '')
+call s:Highlight('Number',          s:greys[1], '', '', '')
+call s:Highlight('Constant',        s:greys[1], '', '', '')
+call s:Highlight('Float',           s:greys[1], '', '', '')
 
 call s:Highlight('FoldColumn',      s:white, s:greys[4], '', '')
 call s:Highlight('Folded',          s:white, s:greys[4], '', '')
 
-call s:Highlight('MatchParen',      s:black, s:white, 'bold', '')
+call s:Highlight('MatchParen',      s:black, s:white, '', '')
 
 call s:Highlight('LineNr',          s:greys[2], '', '', '')
 call s:Highlight('NonText',         s:greys[2], '', '', '')
@@ -175,19 +177,19 @@ call s:HighlightX('CursorLine',     '', s:greys[5], '', '')
 call s:Highlight('SignColumn',      '', s:greys[5], '', '')
 call s:HighlightX('ColorColumn',    '', s:greys[5], '', '')
 
-call s:Highlight('Error',           s:white, s:greys[5], 'bold', '')
-call s:Highlight('ErrorMsg',        s:white, '', 'bold', '')
+call s:Highlight('Error',           s:white, s:greys[5], '', '')
+call s:Highlight('ErrorMsg',        s:white, '', '', '')
 call s:Highlight('WarningMsg',      s:white, '', '', '')
 
 call s:Highlight('Cursor',          s:greys[5], s:white, '', '')
 call s:Highlight('vCursor',         s:greys[5], s:white, '', '')
 call s:Highlight('iCursor',         s:greys[5], s:white, '', '')
 
-call s:Highlight('StatusLine',      s:white, s:black, 'bold', '')
-call s:Highlight('StatusLineNC',    s:greys[1], s:greys[5], 'bold', '')
-call s:Highlight('VertSplit',       s:greys[1], s:greys[5], 'bold', '')
+call s:Highlight('StatusLine',      s:white, s:black, '', '')
+call s:Highlight('StatusLineNC',    s:greys[1], s:greys[5], '', '')
+call s:Highlight('VertSplit',       s:greys[1], s:greys[5], '', '')
 
-call s:Highlight('ModeMsg',         s:white, '', 'bold', '')
+call s:Highlight('ModeMsg',         s:white, '', '', '')
 
 if has("spell")
     call s:HighlightX('SpellBad',    '', '', 'undercurl', s:mordant)
@@ -217,7 +219,7 @@ call s:Highlight('Directory',       s:white, '', '', '')
 call s:Highlight('Question',        s:white, '', '', '')
 call s:Highlight('MoreMsg',         s:white, '', '', '')
 
-call s:Highlight('WildMenu',        s:black, s:white, 'bold', '')
+call s:Highlight('WildMenu',        s:black, s:white, '', '')
 
 call s:Highlight('Title',           '', '', 'underline', '')
 
@@ -264,7 +266,7 @@ call s:Highlight('scalaClassName',        s:white, '', '', '')
 call s:Highlight('scalaConstructor',      s:text, '', '', '')
 
 "*** VIMSCRIPT ***
-call s:Highlight('vimCommentTitle',       s:white, '', 'bold', '')
+call s:Highlight('vimCommentTitle',       s:white, '', '', '')
 call s:Highlight('vimParenSep',           s:text, '', '', '')
 call s:Highlight('vimSep',                s:text, '', '', '')
 call s:Highlight('vimOper',               s:text, '', '', '')
