@@ -135,7 +135,7 @@ call s:Highlight('Structure',       s:cerise, '', '', '')
 call s:Highlight('TypeDef',         s:cerise, '', '', '')
 
 call s:Highlight('Exception',       s:white, '', '', '')
-call s:Highlight('Include',         s:white, '', '', '')
+call s:Highlight('Include',         s:greys[1], '', '', '')
 
 call s:Highlight('PreProc',         s:white, '', '', '')
 call s:Highlight('Macro',           s:white, '', '', '')
