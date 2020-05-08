@@ -70,7 +70,7 @@ hi LineNr ctermbg=NONE ctermfg=white cterm=NONE
 set cursorline
 highlight clear CursorLine
 highlight CursorLine   ctermbg=NONE  ctermfg=NONE  cterm=NONE
-highlight CursorLineNR ctermbg=darkgrey ctermfg=white cterm=NONE
+highlight CursorLineNR ctermbg=lightgrey ctermfg=black cterm=NONE
 
 " No cursor blinking
 set guicursor=n-v-c:block-Cursor
@@ -123,10 +123,10 @@ highlight TabLineFill ctermfg=black ctermbg=NONE
 highlight TabLineSel ctermfg=white ctermbg=darkgrey
 
 " Highlight Todos
-highlight Todo ctermfg=yellow
+" highlight Todo ctermfg=yellow
 
 " Highlight comments
-highlight Comment ctermfg=darkgrey
+" highlight Comment ctermfg=darkgrey
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case-insensitive feature

@@ -35,7 +35,7 @@ let s:brick = ['#CB4154', 167]
 let s:lilac = ['#AE81FF', 141]
 
 " Blue
-let s:frost = ['#2C89C7', 68] 
+let s:frost = ['#2C89C7', 68]
 
 " Yellow
 let s:sunny = ['#FFFC7F', 228]
@@ -120,39 +120,39 @@ endfunction
 
 call s:Highlight('Normal', s:text, s:text_bg, '', '')
 
-call s:Highlight('Statement',   s:white, '', 'bold', '')
-call s:Highlight('Keyword',     s:cerise, '', 'bold', '')
-call s:Highlight('Conditional', s:cerise, '', 'bold', '')
-call s:Highlight('Operator',    s:white, '', '', '')
+call s:Highlight('Statement',   s:white, '', '', '')
+call s:Highlight('Keyword',     s:cerise, '', '', '')
+call s:Highlight('Conditional', s:cerise, '', '', '')
+call s:Highlight('Operator',    s:cerise, '', '', '')
 call s:Highlight('Label',       s:white, '', '', '')
-call s:Highlight('Repeat',      s:cerise, '', 'bold', '')
+call s:Highlight('Repeat',      s:cerise, '', '', '')
 
 call s:Highlight('Type',            s:cerise, '', '', '')
 call s:Highlight('StorageClass',    s:cerise, '', '', '')
 call s:Highlight('Structure',       s:cerise, '', '', '')
 call s:Highlight('TypeDef',         s:cerise, '', '', '')
 
-call s:Highlight('Exception',       s:white, '', 'bold', '')
-call s:Highlight('Include',         s:cerise, '', 'bold', '')
+call s:Highlight('Exception',       s:white, '', '', '')
+call s:Highlight('Include',         s:cerise, '', '', '')
 
 call s:Highlight('PreProc',         s:white, '', '', '')
 call s:Highlight('Macro',           s:white, '', '', '')
 call s:Highlight('Define',          s:white, '', '', '')
 call s:Highlight('Delimiter',       s:white, '', '', '')
 call s:Highlight('Ignore',          s:white, '', '', '')
-call s:Highlight('PreCondit',       s:white, '', 'bold', '')
-call s:Highlight('Debug',           s:white, '', 'bold', '')
+call s:Highlight('PreCondit',       s:white, '', '', '')
+call s:Highlight('Debug',           s:white, '', '', '')
 
 call s:Highlight('Function',        s:white, '', '', '')
 call s:Highlight('Identifier',      s:white, '', '', '')
 
-call s:Highlight('Comment',         s:frost, '', '', '')
-call s:Highlight('CommentEmail',    s:frost, '', 'underline', '')
-call s:Highlight('CommentUrl',      s:frost, '', 'underline', '')
-call s:Highlight('SpecialComment',  s:frost, '', 'bold', '')
-call s:Highlight('Todo',            s:frost, '', 'bold', '')
+call s:Highlight('Comment',         s:greys[1], '', '', '')
+call s:Highlight('CommentEmail',    s:greys[1], '', '', '')
+call s:Highlight('CommentUrl',      s:greys[1], '', '', '')
+call s:Highlight('SpecialComment',  s:greys[1], '', '', '')
+call s:Highlight('Todo',            s:greys[1], '', '', '')
 
-call s:Highlight('String',          s:greys[1], '', '', '') 
+call s:Highlight('String',          s:greys[1], '', '', '')
 call s:Highlight('SpecialKey',      s:greys[1], '', 'bold', '')
 call s:Highlight('Special',         s:greys[1], '', 'bold', '')
 call s:Highlight('SpecialChar',     s:greys[1], '', 'bold', '')
@@ -202,9 +202,9 @@ call s:Highlight('Search',          s:black, s:gold, '', '')
 call s:Highlight('IncSearch',       s:black, s:gold, '', '')
 
 call s:Highlight('Pmenu',           s:black, s:gold, '', '')
-call s:Highlight('PmenuSel',        s:gold, s:black, 'bold', '')
-call s:Highlight('Pmenu',           '', s:greys[5], '', '')
-call s:Highlight('Pmenu',           s:frost, '', '', '')
+call s:Highlight('PmenuSel',        s:black, s:gold, '', '')
+call s:Highlight('Pmenu',           s:black, s:greys[5], '', '')
+call s:Highlight('Pmenu',           s:white, '', '', '')
 
 call s:HighlightX('DiffDelete',     s:auburn, s:auburn, '', '')
 call s:HighlightX('DiffText',       '', s:greys[3], '', '')
@@ -213,11 +213,11 @@ call s:HighlightX('DiffAdd',        '', s:moss, '', '')
 
 call s:HighlightX('Underlined',     '', '', 'underline', '')
 
-call s:Highlight('Directory',       s:lime, '', '', '')
-call s:Highlight('Question',        s:lime, '', '', '')
-call s:Highlight('MoreMsg',         s:lime, '', '', '')
+call s:Highlight('Directory',       s:white, '', '', '')
+call s:Highlight('Question',        s:white, '', '', '')
+call s:Highlight('MoreMsg',         s:white, '', '', '')
 
-call s:Highlight('WildMenu',        s:black, s:lilac, 'bold', '')
+call s:Highlight('WildMenu',        s:black, s:white, 'bold', '')
 
 call s:Highlight('Title',           '', '', 'underline', '')
 
@@ -225,20 +225,20 @@ call s:HighlightX('Tag',            '', '', 'bold', '')
 
 "*** PYTHON ***
 call s:Highlight('pythonDecorator',     s:cerise, '', '', '')
-call s:Highlight('pythonException',     s:lime, '', 'bold', '')
-call s:Highlight('pythonExceptions',    s:lime, '', '', '')
+call s:Highlight('pythonException',     s:white, '', '', '')
+call s:Highlight('pythonExceptions',    s:white, '', '', '')
 
 "*** RUBY ***
-call s:Highlight('rubyModule',            s:lime, '', '', '')
+call s:Highlight('rubyModule',            s:white, '', '', '')
 call s:Highlight('rubyModuleNameTag',     s:text, '', '', '')
 call s:Highlight('rubyPseudoVariable',    s:text, '', '', '')
 call s:Highlight('rubyClass',             s:cerise, '', '', '')
 call s:Highlight('rubyClassNameTag',      s:gold, '', '', '')
 call s:Highlight('rubyDefine',            s:cerise, '', '', '')
 call s:Highlight('rubyConstant',          s:text, '', '', '')
-call s:Highlight('rubyStringDelimiter',   s:sunny, '', '', '')
-call s:Highlight('rubyInterpolation',     s:lilac, '', '', '')
-call s:Highlight('rubyInterpolationDelimiter',     s:lilac, '', '', '')
+call s:Highlight('rubyStringDelimiter',   s:white, '', '', '')
+call s:Highlight('rubyInterpolation',     s:white, '', '', '')
+call s:Highlight('rubyInterpolationDelimiter',     s:white, '', '', '')
 
 "*** JAVASCRIPT ***
 call s:Highlight('javaScriptNull',        s:white, '', 'bold', '')
@@ -255,82 +255,82 @@ call s:Highlight('clojureDefine',         s:cerise, '', '', '')
 call s:Highlight('clojureSpecial',        s:cerise, '', '', '')
 call s:Highlight('clojureCond',           s:cerise, '', '', '')
 call s:Highlight('clojureParen0',         s:text, '', '', '')
-call s:Highlight('clojureMacro',          s:lime, '', 'bold', '')
-call s:Highlight('clojureDispatch',       s:lilac, '', 'bold', '')
-call s:Highlight('clojureError',          s:black, s:mordant, 'bold', '')
+call s:Highlight('clojureMacro',          s:white, '', '', '')
+call s:Highlight('clojureDispatch',       s:white, '', '', '')
+call s:Highlight('clojureError',          s:black, s:cerise, '', '')
 
 "*** SCALA ***
-call s:Highlight('scalaClassName',        s:gold, '', '', '')
+call s:Highlight('scalaClassName',        s:white, '', '', '')
 call s:Highlight('scalaConstructor',      s:text, '', '', '')
 
 "*** VIMSCRIPT ***
-call s:Highlight('vimCommentTitle',       s:frost, '', 'bold', '')
+call s:Highlight('vimCommentTitle',       s:white, '', 'bold', '')
 call s:Highlight('vimParenSep',           s:text, '', '', '')
 call s:Highlight('vimSep',                s:text, '', '', '')
 call s:Highlight('vimOper',               s:text, '', '', '')
 
 "*** XML ***
-call s:Highlight('xmlProcessingDelim',       s:brick, '', '', '')
-call s:Highlight('xmlNamespace',             s:gold, '', '', '')
-call s:Highlight('xmlTag',                   s:gold, '', '', '')
-call s:Highlight('xmlTagName',               s:gold, '', '', '')
-call s:Highlight('xmlEndTag',                s:gold, '', '', '')
-call s:Highlight('xmlAttrib',                s:brick, '', '', '')
-call s:Highlight('xmlAttribPunct',           s:brick, '', '', '')
-call s:Highlight('xmlEntity',                s:lilac, '', 'bold', '')
-call s:Highlight('xmlEntityPunct',           s:lilac, '', '', '')
+call s:Highlight('xmlProcessingDelim',       s:white, '', '', '')
+call s:Highlight('xmlNamespace',             s:cerise, '', '', '')
+call s:Highlight('xmlTag',                   s:cerise, '', '', '')
+call s:Highlight('xmlTagName',               s:white, '', '', '')
+call s:Highlight('xmlEndTag',                s:white, '', '', '')
+call s:Highlight('xmlAttrib',                s:white, '', '', '')
+call s:Highlight('xmlAttribPunct',           s:white, '', '', '')
+call s:Highlight('xmlEntity',                s:white, '', 'bold', '')
+call s:Highlight('xmlEntityPunct',           s:white, '', '', '')
 
 "*** HTML ***
-call s:Highlight('htmlTagName',              s:gold, '', '', '')
-call s:Highlight('htmlTag',                  s:gold, '', '', '')
-call s:Highlight('htmlTagN',                 s:gold, '', '', '')
-call s:Highlight('htmlEvent',                s:brick, '', '', '')
-call s:Highlight('htmlEventDQ',              s:lime, '', '', '')
-call s:Highlight('htmlH1',                   '', '', 'bold', '')
-call s:Highlight('htmlH2',                   '', '', 'bold', '')
-call s:Highlight('htmlH3',                   '', '', 'italic', '')
-call s:Highlight('htmlH4',                   '', '', 'italic', '')
-call s:Highlight('htmlScriptTag',            s:lime, '', '', '')
+call s:Highlight('htmlTagName',              s:white, '', '', '')
+call s:Highlight('htmlTag',                  s:cerise, '', '', '')
+call s:Highlight('htmlTagN',                 s:white, '', '', '')
+call s:Highlight('htmlEvent',                s:white, '', '', '')
+call s:Highlight('htmlEventDQ',              s:white, '', '', '')
+call s:Highlight('htmlH1',                   '', '', '', '')
+call s:Highlight('htmlH2',                   '', '', '', '')
+call s:Highlight('htmlH3',                   '', '', '', '')
+call s:Highlight('htmlH4',                   '', '', '', '')
+call s:Highlight('htmlScriptTag',            s:white, '', '', '')
 
 "*** HTML/JAVASCRIPT ***
 call s:Highlight('javaScript',               s:text, '', '', '')
 
 "*** CSS ***
-call s:Highlight('cssSelectorOp',            s:text, '', '', '')
-call s:Highlight('cssSelectorOp2',           s:text, '', '', '')
+call s:Highlight('cssSelectorOp',            s:cerise, '', '', '')
+call s:Highlight('cssSelectorOp2',           s:cerise, '', '', '')
 call s:Highlight('cssBraces',                s:text, '', '', '')
 call s:Highlight('cssPseudoClass',           s:text, '', '', '')
 call s:Highlight('cssValueNumber',           s:text, '', '', '')
 call s:Highlight('cssValueLength',           s:text, '', '', '')
 call s:Highlight('cssColor',                 s:text, '', '', '')
-call s:Highlight('cssImportant',             s:text, '', 'bold', '')
-call s:Highlight('cssCommonAttr',            s:text, '', 'bold', '')
-call s:Highlight('cssRenderAttr',            s:text, '', 'bold', '')
-call s:Highlight('cssBoxAttr',               s:text, '', 'bold', '')
-call s:Highlight('cssUIAttr',                s:text, '', 'bold', '')
-call s:Highlight('cssTextAttr',              s:text, '', 'bold', '')
-call s:Highlight('cssTableAttr',             s:text, '', 'bold', '')
-call s:Highlight('cssColorAttr',             s:text, '', 'bold', '')
+call s:Highlight('cssImportant',             s:text, '', '', '')
+call s:Highlight('cssCommonAttr',            s:text, '', '', '')
+call s:Highlight('cssRenderAttr',            s:text, '', '', '')
+call s:Highlight('cssBoxAttr',               s:text, '', '', '')
+call s:Highlight('cssUIAttr',                s:text, '', '', '')
+call s:Highlight('cssTextAttr',              s:text, '', '', '')
+call s:Highlight('cssTableAttr',             s:text, '', '', '')
+call s:Highlight('cssColorAttr',             s:text, '', '', '')
 
 "*** minibufexpl ***
 call s:Highlight('MBENormal',                 s:greys[1], '', '', '')
-call s:Highlight('MBEVisibleNormal',          s:white, '', 'bold', '')
-call s:Highlight('MBEVisibleActive',          s:frost, '', 'bold', '')
-call s:Highlight('MBEChanged',                s:greys[1], '', 'italic', '')
-call s:Highlight('MBEVisibleChanged',         s:white, '', 'bold,italic', '')
-call s:Highlight('MBEVisibleChangedActive',   s:frost, '', 'bold,italic', '')
+call s:Highlight('MBEVisibleNormal',          s:white, '', '', '')
+call s:Highlight('MBEVisibleActive',          s:white, '', '', '')
+call s:Highlight('MBEChanged',                s:greys[1], '', '', '')
+call s:Highlight('MBEVisibleChanged',         s:white, '', '', '')
+call s:Highlight('MBEVisibleChangedActive',   s:white, '', '', '')
 
 "*** vim-easymotion ***
-call s:Highlight('EasyMotionTarget',          s:cerise, '', 'bold', '')
+call s:Highlight('EasyMotionTarget',          s:gold, '', '', '')
 call s:Highlight('EasyMotionShade',           s:greys[2], '', '', '')
 
 "*** CtrlP ***
 call s:Highlight('CtrlPNoEntries',            s:mordant, '', '', '')
-call s:Highlight('CtrlPPrtBase',              '', '', 'bold', '')
+call s:Highlight('CtrlPPrtBase',              '', '', '', '')
 
 "*** taglist.vim ***
-call s:Highlight('TagListTitle',              s:white, '', 'bold', '')
-call s:Highlight('TagListFileName',           s:brick, '', '', '')
+call s:Highlight('TagListTitle',              s:white, '', '', '')
+call s:Highlight('TagListFileName',           s:white, '', '', '')
 
 "*** YouCompleteMe ***
-call s:Highlight('YcmErrorSection',           s:greys[5], s:mordant, 'bold', '')
+call s:Highlight('YcmErrorSection',           s:greys[5], s:mordant, '', '')
