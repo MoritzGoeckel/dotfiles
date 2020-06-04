@@ -1,0 +1,208 @@
+// Extensions:
+// > ext install
+
+// > Local
+// konstantin.plain
+// vscodevim.vim
+// ms-vscode-remote.vscode-remote-extensionpack
+// ms-vscode-remote.remote-wsl
+// ms-vscode-remote.remote-ssh-edit
+
+// > Remote
+// atishay-jain.all-autocomplete
+// ms-vscode.cpptools
+// xaver.clang-format
+// eamodio.gitlens
+// ryzngard.vscode-header-source
+// ms-python.python
+// gruntfuggly.todo-tree
+
+{
+    "workbench.colorTheme": "plain-dark",
+    "workbench.iconTheme": null,
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    //"C_Cpp.intelliSenseEngine": "Default",
+    //"C_Cpp.intelliSenseEngineFallback": "Enabled",
+    //"editor.formatOnSave": true,
+    "[python]": {
+        "editor.formatOnSave": false,
+    },
+    "[cpp]": {
+        "editor.formatOnSave": true,
+    },
+    //"C_Cpp.clang_format_fallbackStyle": "Visual Studio",
+    "AllAutocomplete.updateOnlyOnSave": false,
+    "editor.tabCompletion": "on",
+    "editor.suggest.localityBonus": true,
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.wordBasedSuggestions": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    // Never close brackets automatically
+    "editor.autoClosingBrackets": "never",
+    // Never close quotation marks automatically
+    "editor.autoClosingQuotes": "never",
+    //"clang-format.executable": "../clang_format",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1A1A1A",
+        "editor.background": "#1A1A1A",
+        "activityBar.background": "#1A1A1A",
+        //"statusBar.noFolderBackground": "#212121",
+        //"statusBar.debuggingBackground": "#263238",
+        "editor.selectionBackground": "#555",
+        "editor.selectionForeground": "#000",
+        "editor.selectionHighlightBackground": "#444",
+        "editor.findMatchHighlightBackground": "#444",
+        //"editor.findMatchBackground": "#ff0000",
+        "editor.lineHighlightBackground": "#1A1A1A",
+        "editorLineNumber.foreground": "#444",
+        "editorLineNumber.activeForeground": "#999"
+    },
+    //"editor.smoothScrolling": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    // No readcrumbs on top of window
+    "breadcrumbs.enabled": false,
+    "editor.renderLineHighlight": "all",
+    "terminal.integrated.fontFamily": "Consolas",
+    //"editor.fontFamily": "Fixedsys Excelsior 3.01", // Use 8*X fontSize
+    "editor.fontFamily": "IBM Plex Mono Medium",
+    //"editor.fontFamily": "Fira Code",
+    //"editor.fontWeight": "400",
+    //"editor.fontLigatures": true,
+    "editor.fontSize": 14,
+
+    // Syntax customization
+    // Using theme: plain-dark
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": ["support.type"],
+                "settings": { "fontStyle": "",  "foreground":"#D7D5D1"}
+            },
+            {
+                "scope": [ "keyword.control", ], 
+                "settings": { "foreground": "#bb5d5d", }
+            },
+            {
+                "scope": [ "comment", "storage.modifier", "string", "string.quoted.double.cpp", "constant.language", "constant.numeric", "keyword.control.directive.include.cpp"], 
+                // Do not make strings italic
+                "settings": { "foreground": "#d7d5d180",  "fontStyle": "" }
+            },
+            {
+                "scope": [ "storage.modifier.pointer", "storage.modifier.reference"], 
+                "settings": { "foreground": "#bb5d5d", }
+            },
+            {
+                "scope": [ "storage.type", ], 
+                "settings": { "foreground": "#d7d5d18a", }
+            },
+            {
+                "scope": [ "variable", "variable.parameter.cpp", ], 
+                "settings": { "foreground": "#d7d5d1b7", }
+            },
+        ],
+        //"comments": "#4e4e4e",
+        //"keywords": "#ffa600",
+        //"types":"#646464",
+        //"variables": "#ffffff",
+        //"numbers":"#ffffff",
+        //"functions": "#ffffff",
+        //"strings": "#4e4e4e",
+    },
+    "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-e>"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save"
+                },
+                {
+                    "command": "extension.vim_escape"
+                }
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "\\",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.tree.scanMode": "open files",
+    "todo-tree.general.tagGroups": {
+        "MGTODO": [
+            "MGTODO",
+            "MGDO",
+            "MGMAYBE"
+        ]
+    },
+    "todo-tree.highlights.customHighlight": {
+        "MGTODO": {
+            "foreground": "black",
+            "background": "#ffcc00",
+            "type": "text-and-comment",
+            "opacity": 75,
+            "iconColour": "#ffffff"
+        }
+    },
+    "todo-tree.general.tags": [
+        //"TODO",
+        "MGTODO",
+        "MGDO",
+        "MGMAYBE"
+    ],
+    "remote.SSH.remotePlatform": {
+        
+    },
+    // Do not show inline git blame
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "window.menuBarVisibility": "hidden",
+}
