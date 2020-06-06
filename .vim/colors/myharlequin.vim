@@ -125,7 +125,7 @@ call s:Highlight('Normal', s:text, s:text_bg, '', '')
 call s:Highlight('Statement',   s:white, '', '', '')
 call s:Highlight('Keyword',     s:cerise, '', '', '')
 call s:Highlight('Conditional', s:cerise, '', '', '')
-call s:Highlight('Operator',    s:cerise, '', '', '')
+call s:Highlight('Operator',    s:white, '', '', '')
 call s:Highlight('Label',       s:white, '', '', '')
 call s:Highlight('Repeat',      s:cerise, '', '', '')
 

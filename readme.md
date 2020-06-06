@@ -33,3 +33,5 @@ git submodule init
 git submodule update
 
 sudo apt install clang-format
+
+Remove some code from vim-mark plugin to fix some exceptions
