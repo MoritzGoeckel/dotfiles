@@ -110,8 +110,8 @@ match ExtraWhitespace /\s\+$/
 " using ; because of remapping
 map <silent> <C-o> ;FSHere<CR>
 
-"Make scrolling follow cursor
-set so=999
+"Make scrolling not follow cursor
+set so=0
 
 " no underline in tabs
 highlight TabLine cterm=None ctermfg=white ctermbg=NONE
@@ -121,6 +121,10 @@ highlight TabLineFill ctermfg=black ctermbg=NONE
 
 " Selected tab
 highlight TabLineSel ctermfg=white ctermbg=darkgrey
+
+" Change char under cursor
+highlight Cursor ctermfg=black ctermbg=darkgrey
+highlight lCursor ctermfg=black ctermbg=darkgrey
 
 " Highlight Todos
 " highlight Todo ctermfg=yellow
