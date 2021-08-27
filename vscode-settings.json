@@ -1,13 +1,11 @@
 // Extensions:
 // > ext install
-
 // > Local
 // konstantin.plain
 // vscodevim.vim
 // ms-vscode-remote.vscode-remote-extensionpack
 // ms-vscode-remote.remote-wsl
 // ms-vscode-remote.remote-ssh-edit
-
 // > Remote
 // atishay-jain.all-autocomplete
 // ms-vscode.cpptools
@@ -16,7 +14,6 @@
 // ryzngard.vscode-header-source
 // ms-python.python
 // gruntfuggly.todo-tree
-
 {
     "workbench.colorTheme": "plain-dark",
     "workbench.iconTheme": null,
@@ -25,12 +22,19 @@
     //"C_Cpp.intelliSenseEngine": "Default",
     //"C_Cpp.intelliSenseEngineFallback": "Enabled",
     //"editor.formatOnSave": true,
-    "[python]": {
-        "editor.formatOnSave": false,
-    },
-    "[cpp]": {
-        "editor.formatOnSave": true,
-    },
+    "editor.defaultFormatter": "xaver.clang-format",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    //"[python]": {
+    //    "editor.formatOnSave": false,
+    //},
+    //"[cpp]": {
+    //    "editor.formatOnSave": true,
+    //},
+    //"[c]": {
+    //    "editor.formatOnSave": true,
+    //},
     //"C_Cpp.clang_format_fallbackStyle": "Visual Studio",
     "AllAutocomplete.updateOnlyOnSave": false,
     "editor.tabCompletion": "on",
@@ -42,12 +46,17 @@
         "comments": true,
         "strings": true
     },
-    // Never close brackets automatically
+    "editor.minimap.showSlider": "always",
+    // Never close brackets / quotes automatically
     "editor.autoClosingBrackets": "never",
-    // Never close quotation marks automatically
     "editor.autoClosingQuotes": "never",
     //"clang-format.executable": "../clang_format",
     "workbench.colorCustomizations": {
+        "minimap.findMatchHighlight": "#bb5d5d",
+        "minimap.selectionHighlight": "#bb5d5d",
+        "minimapSlider.background": "#bb5d5d1e",
+        "minimapSlider.hoverBackground": "#bb5d5d1e",
+        "minimapSlider.activeBackground": "#bb5d5d52",
         "statusBar.background": "#1A1A1A",
         "editor.background": "#1A1A1A",
         "activityBar.background": "#1A1A1A",
@@ -62,48 +71,82 @@
         "editorLineNumber.foreground": "#444",
         "editorLineNumber.activeForeground": "#999"
     },
-    //"editor.smoothScrolling": true,
+    "editor.smoothScrolling": true,
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": true,
-    // No readcrumbs on top of window
-    "breadcrumbs.enabled": false,
+    "workbench.list.smoothScrolling": true,
+    "breadcrumbs.enabled": true,
     "editor.renderLineHighlight": "all",
     "terminal.integrated.fontFamily": "Consolas",
     //"editor.fontFamily": "Fixedsys Excelsior 3.01", // Use 8*X fontSize
-    "editor.fontFamily": "IBM Plex Mono Medium",
+    //"editor.fontFamily": "IBM Plex Mono Medium",
+    "editor.fontFamily": "JetBrains Mono",
     //"editor.fontFamily": "Fira Code",
     //"editor.fontWeight": "400",
-    //"editor.fontLigatures": true,
-    "editor.fontSize": 14,
-
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
     // Syntax customization
     // Using theme: plain-dark
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "scope": ["support.type"],
-                "settings": { "fontStyle": "",  "foreground":"#D7D5D1"}
+                "scope": [
+                    "support.type"
+                ],
+                "settings": {
+                    "fontStyle": "",
+                    "foreground": "#D7D5D1"
+                }
             },
             {
-                "scope": [ "keyword.control", ], 
-                "settings": { "foreground": "#bb5d5d", }
+                "scope": [
+                    "keyword.control",
+                ],
+                "settings": {
+                    "foreground": "#bb5d5d",
+                }
             },
             {
-                "scope": [ "comment", "storage.modifier", "string", "string.quoted.double.cpp", "constant.language", "constant.numeric", "keyword.control.directive.include.cpp"], 
+                "scope": [
+                    "comment",
+                    "storage.modifier",
+                    "string",
+                    "string.quoted.double.cpp",
+                    "constant.language",
+                    "constant.numeric",
+                    "keyword.control.directive.include.cpp"
+                ],
                 // Do not make strings italic
-                "settings": { "foreground": "#d7d5d180",  "fontStyle": "" }
+                "settings": {
+                    "foreground": "#d7d5d180",
+                    "fontStyle": ""
+                }
             },
             {
-                "scope": [ "storage.modifier.pointer", "storage.modifier.reference"], 
-                "settings": { "foreground": "#bb5d5d", }
+                "scope": [
+                    "storage.modifier.pointer",
+                    "storage.modifier.reference"
+                ],
+                "settings": {
+                    "foreground": "#bb5d5d",
+                }
             },
             {
-                "scope": [ "storage.type", ], 
-                "settings": { "foreground": "#d7d5d18a", }
+                "scope": [
+                    "storage.type",
+                ],
+                "settings": {
+                    "foreground": "#d7d5d18a",
+                }
             },
             {
-                "scope": [ "variable", "variable.parameter.cpp", ], 
-                "settings": { "foreground": "#d7d5d1b7", }
+                "scope": [
+                    "variable",
+                    "variable.parameter.cpp",
+                ],
+                "settings": {
+                    "foreground": "#d7d5d1b7",
+                }
             },
         ],
         //"comments": "#4e4e4e",
@@ -114,9 +157,12 @@
         //"functions": "#ffffff",
         //"strings": "#4e4e4e",
     },
-    "editor.minimap.enabled": false,
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": true,
+    "workbench.editor.wrapTabs" : true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.decorations.badges": true,
+    //"workbench.editor.tabSizing": "shrink",
     "vim.easymotion": true,
     "vim.sneak": true,
     "vim.incsearch": true,
@@ -179,9 +225,13 @@
     "todo-tree.general.tagGroups": {
         "MGTODO": [
             "MGTODO",
+            "mgtodo",
             "MGDO",
-            "MGMAYBE"
-        ]
+            "mgdo"
+        ],
+        "MGMAYBE" : ["MGMAYBE", "mgmaybe"],
+        "MGASK":["MGASK", "mgask"],
+        "MGNOTE": ["MGNOTE", "mgnote"]
     },
     "todo-tree.highlights.customHighlight": {
         "MGTODO": {
@@ -190,19 +240,60 @@
             "type": "text-and-comment",
             "opacity": 75,
             "iconColour": "#ffffff"
+        },
+        "MGMAYBE": {
+            "foreground": "black",
+            "background": "#ffcc99",
+            "type": "text-and-comment",
+            "opacity": 75,
+            "iconColour": "#ffffff"
+        },
+        "MGASK": {
+            "foreground": "black",
+            "background": "#26ff00",
+            "type": "text-and-comment",
+            "opacity": 75,
+            "iconColour": "#ffffff"
+        },
+        "MGNOTE": {
+            "foreground": "black",
+            "background": "#00bfff",
+            "type": "text-and-comment",
+            "opacity": 75,
+            "iconColour": "#ffffff"
         }
     },
     "todo-tree.general.tags": [
         //"TODO",
         "MGTODO",
+        "mgtodo",
         "MGDO",
-        "MGMAYBE"
+        "mgdo",
+        "MGMAYBE",
+        "mgmaybe",
+        "MGASK",
+        "mgask",
+        "MGNOTE",
+        "mgnote"
     ],
     "remote.SSH.remotePlatform": {
-        
     },
     // Do not show inline git blame
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
     "window.menuBarVisibility": "hidden",
+    "window.zoomLevel": 0,
+    // Keep tab open when using the ctr+p menu
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "cmake.configureOnOpen": false,
+    "editor.tabSize": 8,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off"
 }
+
