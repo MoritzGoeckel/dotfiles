@@ -33,6 +33,7 @@ set incsearch           " search before pressing enter
 set display+=lastline   " show lines even if they dont fit screen
 
 set formatoptions+=j    " remove comment char when joining lines
+set formatoptions-=cro  " don't add comment leader automatically on new line
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
@@ -173,6 +174,8 @@ com! FmtOneLine %j
 " use ;Erc and ;Src to edit Vimrc and source it
 com! Erc edit ~/.vimrc
 com! Src source ~/.vimrc
+
+com! -nargs=1 Grp tabnew | r !git grep -n -i --break <q-args>
 
 " use clang format on save
 " let g:clang_format#command = 'path/to/clang_format'
