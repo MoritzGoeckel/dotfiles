@@ -35,6 +35,8 @@ set display+=lastline   " show lines even if they dont fit screen
 set formatoptions+=j    " remove comment char when joining lines
 set formatoptions-=cro  " don't add comment leader automatically on new line
 
+set hidden              " open files without asking to save the old
+
 " Removes trailing spaces
 function! TrimWhiteSpace()
    %s/\s*$//
