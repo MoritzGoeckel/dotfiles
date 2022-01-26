@@ -7,9 +7,10 @@ export PS1="\t \u@\h \[\033[32m\]\w\[\033[35m\]\$(parse_git_branch)\[\033[00m\] 
 alias gitcred='git config credential.helper store'
 alias gitc='git commit -m '
 alias gita='git add -A'
-alias gitp='git push'
 alias gits='git status'
 alias gitac='git add -A; git commit -m '
+alias gitls='git log --format=short'
+alias gitt='git log --graph --pretty=oneline --abbrev-commit'
 
 gitacp() {
     git add -A
@@ -31,9 +32,7 @@ alias oo='xdg-open'
 alias web='lynx'
 
 git config --global core.editor 'vim'
-export SUDO_EDITOR=vim
-
-alias gitt='git log --graph --pretty=oneline --abbrev-commit'
+export SUDO_EDITOR=nvim
 
 #export PATH="your-dir:$PATH"
 

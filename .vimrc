@@ -62,7 +62,6 @@ set list listchars=trail:·,tab:»»
 set ignorecase
 
 " Syntax highlighting
-" set syntax
 syntax on
 
 " Line numbering
