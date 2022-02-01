@@ -10,7 +10,7 @@ if !has("gui_running") && &t_Co != 256
     finish
 endif
 
-let g:colors_name = "myharlequin"
+let g:colors_name = "moritz_theme"
 
 let s:text = ['#F8F8F2', 15]
 let s:text_bg = ['#000000', 0]

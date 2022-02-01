@@ -1,16 +1,13 @@
 execute pathogen#infect()
 
-"colo delek
-"colo my_colors
 "colo badwolf
 "colo jellybeans
 "colo zenburn
-
 "colo harlequin
-colo myharlequin
 "colo molokai
 "colo gruvbox
 "colo srcery
+colo moritz_theme
 
 set nocompatible
 
@@ -194,3 +191,4 @@ set tw=0
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
+
