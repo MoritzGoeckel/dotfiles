@@ -20,17 +20,12 @@ let s:white = ['#FFFFFF', 15]
 let s:black = ['#000000', 0]
 let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
 
-" Red
-let s:cerise = ['#FF0033', 197]
+let s:red = ['#FF0033', 197]
+let s:green = ['#008000', 2]
+let s:orange = ['#FFB829', 214]
 
 " Bright green
 let s:lime = ['#AEEE00', 154]
-
-" Orange
-let s:gold = ['#FFB829', 214]
-
-" Light red
-let s:brick = ['#CB4154', 167]
 
 " Blueish
 let s:lilac = ['#AE81FF', 141]
@@ -40,13 +35,14 @@ let s:frost = ['#2C89C7', 68]
 let s:blue = ['#2C89C7', 6]
 
 " Yellow
-let s:sunny = ['#FFFC7F', 228]
-
-" Red
-let s:mordant = ['#AE0C00', 124]
+let s:yellow = ['#FFFC7F', 228]
 
 " Dark red
+let s:mordant = ['#AE0C00', 124]
 let s:auburn = ['#7C0A02', 88]
+
+" Light red
+let s:brick = ['#CB4154', 167]
 
 " Dark green
 let s:moss = ['#004225', 22]
@@ -124,13 +120,17 @@ call s:Highlight('Normal', s:text, s:text_bg, '', '')
 
 call s:Highlight('Statement',   s:white, '', '', '')
 call s:Highlight('Keyword',     s:white, '', '', '')
-call s:Highlight('Conditional', s:cerise, '', '', '')
+call s:Highlight('Branching',   s:red, '', '', '')
 call s:Highlight('Operator',    s:white, '', '', '')
-call s:Highlight('Label',       s:cerise, '', '', '')
-call s:Highlight('Repeat',      s:cerise, '', '', '')
+call s:Highlight('Label',       s:white, '', '', '') " could be branching
+call s:Highlight('Repeat',      s:white, '', '', '') " could be branching
+call s:Highlight('StdCall',     s:white, '', '', '')
+call s:Highlight('DerefAddr',   s:orange , '', '', '')
+call s:Highlight('PtrRefType',  s:orange, '', '', '')
 
-call s:Highlight('MyHl', s:cerise, '', '', '')
 
+call s:Highlight('StdType',         s:greys[1], '', '', '')
+call s:Highlight('StdNamespace',    s:greys[1], '', '', '')
 call s:Highlight('Type',            s:greys[1], '', '', '')
 call s:Highlight('StorageClass',    s:greys[1], '', '', '')
 call s:Highlight('Structure',       s:greys[1], '', '', '')
@@ -150,11 +150,11 @@ call s:Highlight('Debug',           s:white, '', '', '')
 call s:Highlight('Function',        s:white, '', '', '')
 call s:Highlight('Identifier',      s:white, '', '', '')
 
-call s:Highlight('Comment',         s:greys[1], '', '', '')
-call s:Highlight('CommentEmail',    s:greys[1], '', '', '')
-call s:Highlight('CommentUrl',      s:greys[1], '', '', '')
-call s:Highlight('SpecialComment',  s:greys[1], '', '', '')
-call s:Highlight('Todo',            s:gold,     '', '', '')
+call s:Highlight('Comment',         s:green, '', '', '')
+call s:Highlight('CommentEmail',    s:green, '', '', '')
+call s:Highlight('CommentUrl',      s:green, '', '', '')
+call s:Highlight('SpecialComment',  s:green, '', '', '')
+call s:Highlight('Todo',            s:orange,     '', '', '')
 
 call s:Highlight('String',          s:greys[1], '', '', '')
 call s:Highlight('SpecialKey',      s:greys[1], '', '', '')
@@ -202,11 +202,11 @@ endif
 
 call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
 call s:HighlightX('Visual',         '', s:greys[4], '', '')
-call s:Highlight('Search',          s:black, s:gold, '', '')
-call s:Highlight('IncSearch',       s:black, s:gold, '', '')
+call s:Highlight('Search',          s:black, s:orange, '', '')
+call s:Highlight('IncSearch',       s:black, s:orange, '', '')
 
-call s:Highlight('Pmenu',           s:black, s:gold, '', '')
-call s:Highlight('PmenuSel',        s:black, s:gold, '', '')
+call s:Highlight('Pmenu',           s:black, s:orange, '', '')
+call s:Highlight('PmenuSel',        s:black, s:orange, '', '')
 call s:Highlight('Pmenu',           s:black, s:greys[5], '', '')
 call s:Highlight('Pmenu',           s:white, '', '', '')
 
@@ -237,7 +237,7 @@ call s:Highlight('rubyModule',            s:white, '', '', '')
 call s:Highlight('rubyModuleNameTag',     s:text, '', '', '')
 call s:Highlight('rubyPseudoVariable',    s:text, '', '', '')
 call s:Highlight('rubyClass',             s:greys[1], '', '', '')
-call s:Highlight('rubyClassNameTag',      s:gold, '', '', '')
+call s:Highlight('rubyClassNameTag',      s:orange, '', '', '')
 call s:Highlight('rubyDefine',            s:greys[1], '', '', '')
 call s:Highlight('rubyConstant',          s:text, '', '', '')
 call s:Highlight('rubyStringDelimiter',   s:white, '', '', '')
@@ -261,7 +261,7 @@ call s:Highlight('clojureCond',           s:white, '', '', '')
 call s:Highlight('clojureParen0',         s:white, '', '', '')
 call s:Highlight('clojureMacro',          s:white, '', '', '')
 call s:Highlight('clojureDispatch',       s:white, '', '', '')
-call s:Highlight('clojureError',          s:black, s:cerise, '', '')
+call s:Highlight('clojureError',          s:black, s:red, '', '')
 
 "*** SCALA ***
 call s:Highlight('scalaClassName',        s:white, '', '', '')
@@ -325,7 +325,7 @@ call s:Highlight('MBEVisibleChanged',         s:white, '', '', '')
 call s:Highlight('MBEVisibleChangedActive',   s:white, '', '', '')
 
 "*** vim-easymotion ***
-call s:Highlight('EasyMotionTarget',          s:gold, '', '', '')
+call s:Highlight('EasyMotionTarget',          s:orange, '', '', '')
 call s:Highlight('EasyMotionShade',           s:greys[2], '', '', '')
 
 "*** CtrlP ***
