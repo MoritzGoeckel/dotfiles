@@ -13,12 +13,14 @@ endif
 let g:colors_name = "moritz_theme"
 
 let s:text = ['#F8F8F2', 15]
-let s:text_bg = ['#000000', 0]
-"let s:text_bg = ['#1C1B1A', 234]
+"let s:text_bg = ['#000000', 0]
+let s:generalBg = ['fg', 'none']
 
 let s:white = ['#FFFFFF', 15]
 let s:black = ['#000000', 0]
+
 let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
+let s:grey = s:greys[1]
 
 let s:red = ['#FF0033', 197]
 let s:green = ['#008000', 2]
@@ -57,7 +59,7 @@ function! s:Highlight(group_name, guifg, guibg, gui, guisp)
     if !empty(a:guibg)
         let guibg = a:guibg
     else
-        let guibg = ['bg', 'bg']
+        let guibg = s:generalBg
     endif
     if !empty(a:gui)
         let gui = a:gui
@@ -116,7 +118,9 @@ function! s:HighlightX(group_name, guifg, guibg, gui, guisp)
     exe hi_str
 endfunction
 
-call s:Highlight('Normal', s:text, s:text_bg, '', '')
+call s:Highlight('TabLineFill', s:text, '', '', '')
+
+call s:Highlight('Normal', s:text, '', '', '')
 
 call s:Highlight('Statement',   s:white, '', '', '')
 call s:Highlight('Keyword',     s:white, '', '', '')
@@ -129,15 +133,15 @@ call s:Highlight('DerefAddr',   s:orange , '', '', '')
 call s:Highlight('PtrRefType',  s:orange, '', '', '')
 
 
-call s:Highlight('StdType',         s:greys[1], '', '', '')
-call s:Highlight('StdNamespace',    s:greys[1], '', '', '')
-call s:Highlight('Type',            s:greys[1], '', '', '')
-call s:Highlight('StorageClass',    s:greys[1], '', '', '')
-call s:Highlight('Structure',       s:greys[1], '', '', '')
-call s:Highlight('TypeDef',         s:greys[1], '', '', '')
+call s:Highlight('StdType',         s:grey, '', '', '')
+call s:Highlight('StdNamespace',    s:grey, '', '', '')
+call s:Highlight('Type',            s:grey, '', '', '')
+call s:Highlight('StorageClass',    s:grey, '', '', '')
+call s:Highlight('Structure',       s:grey, '', '', '')
+call s:Highlight('TypeDef',         s:grey, '', '', '')
 
 call s:Highlight('Exception',       s:white, '', '', '')
-call s:Highlight('Include',         s:greys[1], '', '', '')
+call s:Highlight('Include',         s:grey, '', '', '')
 
 call s:Highlight('PreProc',         s:white, '', '', '')
 call s:Highlight('Macro',           s:white, '', '', '')
@@ -156,40 +160,41 @@ call s:Highlight('CommentUrl',      s:green, '', '', '')
 call s:Highlight('SpecialComment',  s:green, '', '', '')
 call s:Highlight('Todo',            s:orange,     '', '', '')
 
-call s:Highlight('String',          s:greys[1], '', '', '')
-call s:Highlight('SpecialKey',      s:greys[1], '', '', '')
-call s:Highlight('Special',         s:greys[1], '', '', '')
-call s:Highlight('SpecialChar',     s:greys[1], '', '', '')
+call s:Highlight('String',          s:grey, '', '', '')
+call s:Highlight('SpecialKey',      s:grey, '', '', '')
+call s:Highlight('Special',         s:grey, '', '', '')
+call s:Highlight('SpecialChar',     s:grey, '', '', '')
 
-call s:Highlight('Boolean',         s:greys[1], '', '', '')
-call s:Highlight('Character',       s:greys[1], '', '', '')
-call s:Highlight('Number',          s:greys[1], '', '', '')
-call s:Highlight('Constant',        s:greys[1], '', '', '')
-call s:Highlight('Float',           s:greys[1], '', '', '')
+call s:Highlight('Boolean',         s:grey, '', '', '')
+call s:Highlight('Character',       s:grey, '', '', '')
+call s:Highlight('Number',          s:grey, '', '', '')
+call s:Highlight('Constant',        s:grey, '', '', '')
+call s:Highlight('Float',           s:grey, '', '', '')
 
-call s:Highlight('FoldColumn',      s:white, s:greys[4], '', '')
-call s:Highlight('Folded',          s:white, s:greys[4], '', '')
+call s:Highlight('FoldColumn',      s:white, s:grey, '', '')
+call s:Highlight('Folded',          s:white, s:grey, '', '')
 
 call s:Highlight('MatchParen',      s:black, s:white, '', '')
 
-call s:Highlight('LineNr',          s:greys[2], '', '', '')
-call s:Highlight('NonText',         s:greys[2], '', '', '')
-call s:HighlightX('CursorColumn',   '', s:greys[5], '', '')
-call s:HighlightX('CursorLine',     '', s:greys[5], '', '')
-call s:Highlight('SignColumn',      '', s:greys[5], '', '')
-call s:HighlightX('ColorColumn',    '', s:greys[5], '', '')
+call s:Highlight('LineNr',          s:grey, '', '', '')
+call s:Highlight('NonText',         s:grey, '', '', '')
+call s:HighlightX('CursorColumn',   '', s:grey, '', '')
+call s:HighlightX('CursorLine',     s:white, '', '', '')
+call s:HighlightX('CursorLineNr',   s:white, '', '', '')
+call s:Highlight('SignColumn',      '', '', '', '')
+call s:HighlightX('ColorColumn',    '', s:grey, '', '')
 
-call s:Highlight('Error',           s:white, s:greys[5], '', '')
+call s:Highlight('Error',           s:white, s:grey, '', '')
 call s:Highlight('ErrorMsg',        s:white, '', '', '')
 call s:Highlight('WarningMsg',      s:white, '', '', '')
 
-call s:Highlight('Cursor',          s:greys[5], s:white, '', '')
-call s:Highlight('vCursor',         s:greys[5], s:white, '', '')
-call s:Highlight('iCursor',         s:greys[5], s:white, '', '')
+call s:Highlight('Cursor',          s:grey, s:white, '', '')
+call s:Highlight('vCursor',         s:grey, s:white, '', '')
+call s:Highlight('iCursor',         s:grey, s:white, '', '')
 
-call s:Highlight('StatusLine',      s:white, s:black, '', '')
-call s:Highlight('StatusLineNC',    s:greys[1], s:greys[5], '', '')
-call s:Highlight('VertSplit',       s:greys[1], s:greys[5], '', '')
+call s:Highlight('StatusLine',      s:white, '', '', '')
+call s:Highlight('StatusLineNC',    s:grey, '', '', '')
+call s:Highlight('VertSplit',       s:grey, '', '', '')
 
 call s:Highlight('ModeMsg',         s:white, '', '', '')
 
@@ -200,19 +205,19 @@ if has("spell")
     call s:HighlightX('SpellRare',   '', '', 'undercurl', s:white)
 endif
 
-call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
-call s:HighlightX('Visual',         '', s:greys[4], '', '')
+call s:HighlightX('VisualNOS',      '', s:grey, '', '')
+call s:HighlightX('Visual',         s:black, s:greys[0], '', '')
 call s:Highlight('Search',          s:black, s:orange, '', '')
 call s:Highlight('IncSearch',       s:black, s:orange, '', '')
 
 call s:Highlight('Pmenu',           s:black, s:orange, '', '')
 call s:Highlight('PmenuSel',        s:black, s:orange, '', '')
-call s:Highlight('Pmenu',           s:black, s:greys[5], '', '')
+call s:Highlight('Pmenu',           s:black, s:grey, '', '')
 call s:Highlight('Pmenu',           s:white, '', '', '')
 
 call s:HighlightX('DiffDelete',     s:auburn, s:auburn, '', '')
-call s:HighlightX('DiffText',       '', s:greys[3], '', '')
-call s:HighlightX('DiffChange',     '', s:greys[4], '', '')
+call s:HighlightX('DiffText',       '', s:grey, '', '')
+call s:HighlightX('DiffChange',     '', s:grey, '', '')
 call s:HighlightX('DiffAdd',        '', s:moss, '', '')
 
 call s:HighlightX('Underlined',     '', '', 'underline', '')
@@ -228,7 +233,7 @@ call s:Highlight('Title',           '', '', 'underline', '')
 call s:HighlightX('Tag',            '', '', 'bold', '')
 
 "*** PYTHON ***
-call s:Highlight('pythonDecorator',     s:greys[1], '', '', '')
+call s:Highlight('pythonDecorator',     s:grey, '', '', '')
 call s:Highlight('pythonException',     s:white, '', '', '')
 call s:Highlight('pythonExceptions',    s:white, '', '', '')
 
@@ -236,9 +241,9 @@ call s:Highlight('pythonExceptions',    s:white, '', '', '')
 call s:Highlight('rubyModule',            s:white, '', '', '')
 call s:Highlight('rubyModuleNameTag',     s:text, '', '', '')
 call s:Highlight('rubyPseudoVariable',    s:text, '', '', '')
-call s:Highlight('rubyClass',             s:greys[1], '', '', '')
+call s:Highlight('rubyClass',             s:grey, '', '', '')
 call s:Highlight('rubyClassNameTag',      s:orange, '', '', '')
-call s:Highlight('rubyDefine',            s:greys[1], '', '', '')
+call s:Highlight('rubyDefine',            s:grey, '', '', '')
 call s:Highlight('rubyConstant',          s:text, '', '', '')
 call s:Highlight('rubyStringDelimiter',   s:white, '', '', '')
 call s:Highlight('rubyInterpolation',     s:white, '', '', '')
@@ -317,16 +322,16 @@ call s:Highlight('cssTableAttr',             s:text, '', '', '')
 call s:Highlight('cssColorAttr',             s:text, '', '', '')
 
 "*** minibufexpl ***
-call s:Highlight('MBENormal',                 s:greys[1], '', '', '')
+call s:Highlight('MBENormal',                 s:grey, '', '', '')
 call s:Highlight('MBEVisibleNormal',          s:white, '', '', '')
 call s:Highlight('MBEVisibleActive',          s:white, '', '', '')
-call s:Highlight('MBEChanged',                s:greys[1], '', '', '')
+call s:Highlight('MBEChanged',                s:grey, '', '', '')
 call s:Highlight('MBEVisibleChanged',         s:white, '', '', '')
 call s:Highlight('MBEVisibleChangedActive',   s:white, '', '', '')
 
 "*** vim-easymotion ***
 call s:Highlight('EasyMotionTarget',          s:orange, '', '', '')
-call s:Highlight('EasyMotionShade',           s:greys[2], '', '', '')
+call s:Highlight('EasyMotionShade',           s:grey, '', '', '')
 
 "*** CtrlP ***
 call s:Highlight('CtrlPNoEntries',            s:mordant, '', '', '')
@@ -337,4 +342,4 @@ call s:Highlight('TagListTitle',              s:white, '', '', '')
 call s:Highlight('TagListFileName',           s:white, '', '', '')
 
 "*** YouCompleteMe ***
-call s:Highlight('YcmErrorSection',           s:greys[5], s:mordant, '', '')
+call s:Highlight('YcmErrorSection',           s:grey, s:mordant, '', '')

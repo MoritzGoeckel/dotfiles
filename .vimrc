@@ -11,7 +11,7 @@ colo moritz_theme
 
 set nocompatible
 
-"Autocomplete
+" Autocomplete
 set completeopt=longest,menu ",menuone
 set complete=.,w "i=included files, t=tags, u=unloaded buffers, b=buffers, w=windows, .=buffer
 
@@ -65,11 +65,14 @@ syntax on
 set number
 hi LineNr ctermbg=NONE ctermfg=darkgrey cterm=NONE
 
-"Enables cursor line position tracking
+" Enables cursor line position tracking
 set cursorline
 highlight clear CursorLine
-highlight CursorLine   ctermbg=NONE  ctermfg=NONE  cterm=NONE
-highlight CursorLineNR ctermbg=black ctermfg=white cterm=NONE
+"highlight CursorLine   ctermbg=NONE  ctermfg=NONE  cterm=NONE
+"highlight CursorLineNR ctermbg=228 ctermfg=white cterm=NONE
+
+" No background
+hi Normal ctermbg=NONE
 
 " No cursor blinking
 set guicursor=n-v-c:block-Cursor
@@ -80,7 +83,7 @@ set guicursor+=i:blinkwait10
 set hlsearch
 "hi Search cterm=NONE ctermfg=black ctermbg=yellow
 "hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
-hi Visual cterm=NONE ctermfg=black ctermbg=white
+"hi Visual cterm=NONE ctermfg=black ctermbg=white
 
 hi DiffAdd      cterm=none    ctermfg=black     ctermbg=cyan
 hi DiffDelete   cterm=none    ctermfg=black     ctermbg=red
@@ -122,8 +125,8 @@ highlight TabLineFill ctermfg=black ctermbg=NONE
 highlight TabLineSel ctermfg=white ctermbg=darkgrey
 
 " Change char under cursor
-highlight Cursor ctermfg=black ctermbg=darkgrey
-highlight lCursor ctermfg=black ctermbg=darkgrey
+highlight Cursor ctermfg=black ctermbg=NONE
+highlight lCursor ctermfg=black ctermbg=NONE
 
 " Highlight Todos
 " highlight Todo ctermfg=yellow
@@ -191,4 +194,5 @@ set tw=0
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
+
 
