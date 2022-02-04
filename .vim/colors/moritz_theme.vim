@@ -128,13 +128,14 @@ call s:Highlight('Branching',   s:red, '', '', '')
 call s:Highlight('Operator',    s:white, '', '', '')
 call s:Highlight('Label',       s:white, '', '', '') " could be branching
 call s:Highlight('Repeat',      s:white, '', '', '') " could be branching
-call s:Highlight('StdCall',     s:white, '', '', '')
 call s:Highlight('DerefAddr',   s:orange , '', '', '')
 call s:Highlight('PtrRefType',  s:orange, '', '', '')
 
+"call s:Highlight('StdType',     s:grey, '', '', '')
+"call s:Highlight('StdCall',     s:white, '', '', '')
 
-call s:Highlight('StdType',         s:grey, '', '', '')
 call s:Highlight('StdNamespace',    s:grey, '', '', '')
+call s:Highlight('Namespace',    s:grey, '', '', '')
 call s:Highlight('Type',            s:grey, '', '', '')
 call s:Highlight('StorageClass',    s:grey, '', '', '')
 call s:Highlight('Structure',       s:grey, '', '', '')
