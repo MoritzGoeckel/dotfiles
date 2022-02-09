@@ -55,6 +55,9 @@ set expandtab
 " Show trailing whitespaces with signs
 set list listchars=trail:·,tab:»»
 
+" Format text to 60 char lines with gq
+set textwidth=60
+
 " Searching case insensitive
 set ignorecase
 
