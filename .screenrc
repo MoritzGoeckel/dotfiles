@@ -1,0 +1,7 @@
+autodetach on
+startup_message off
+hardstatus alwayslastline
+escape ^Ff
+defscrollback 5000
+
+hardstatus string '%{= dw}[ %-w%{dg}%n*%t%{= dw}%+w ]%=[%c]'
