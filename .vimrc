@@ -175,3 +175,9 @@ set tw=0
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
+" use clang format on save
+" Init with
+" hm config --set tool.clang-format.version 9.0.0-8-gddbcff5-sap2
+let g:clang_format#command = '/data/i508082/.HappyMake/cache/dependencies/afl/clang-format-9.0.0-8-gddbcff5-sap2-linuxx86_64-gcc6.release.linuxx86_64/bin/clang-format'
+let g:clang_format#auto_format = 1
+
