@@ -1,14 +1,5 @@
 execute pathogen#infect()
 
-"colo badwolf
-"colo jellybeans
-"colo zenburn
-"colo harlequin
-"colo molokai
-"colo gruvbox
-"colo srcery
-colo moritz_theme
-
 set nocompatible
 
 " Autocomplete
@@ -29,7 +20,7 @@ let g:netrw_liststyle=3 " tree style
 set incsearch           " search before pressing enter
 set display+=lastline   " show lines even if they dont fit screen
 
-set formatoptions+=j    " remove comment char when joining lines
+" set formatoptions+=j    " remove comment char when joining lines
 set formatoptions-=cro  " don't add comment leader automatically on new line
 
 set hidden              " open files without asking to save the old
@@ -84,21 +75,11 @@ set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
 
 set hlsearch
-"hi Search cterm=NONE ctermfg=black ctermbg=yellow
-"hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
-"hi Visual cterm=NONE ctermfg=black ctermbg=white
 
 hi DiffAdd      cterm=none    ctermfg=black     ctermbg=cyan
 hi DiffDelete   cterm=none    ctermfg=black     ctermbg=red
 hi DiffChange   cterm=none    ctermfg=black     ctermbg=yellow
 hi DiffText     cterm=none    ctermfg=black     ctermbg=red
-
-" R's gerrit like diff
-"highlight DiffAdd      ctermfg=black   ctermbg=darkgreen
-"highlight DiffDelete   ctermfg=darkred ctermbg=black
-"highlight DiffChange   ctermfg=black   ctermbg=darkgrey
-"highlight! link DiffChange Folded
-"highlight DiffText     ctermfg=black   ctermbg=green
 
 " Open splits right
 set splitright
@@ -181,10 +162,6 @@ com! Src source ~/.vimrc
 
 com! -nargs=1 Grp tabnew | r !git grep -n -i --break <q-args>
 
-" use clang format on save
-" let g:clang_format#command = 'path/to/clang_format'
-let g:clang_format#auto_format = 1
-
 function! GetFunctionName()
     let fn#line_nr = search("^[^ \{\}].*","bWn")
     let fn#line_cnt = getline(fn#line_nr)
@@ -197,5 +174,4 @@ set tw=0
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
-
 

@@ -49,3 +49,17 @@ alias show='vim - -R -m -M'
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
 
+# DO NOT GIT. Custom to this machine
+source /home/i508082/.HappyMake/etc/hminit.sh
+alias cdtrees='cd /SAPDevelop/trees'
+alias cdscripts='cd /SAPDevelop/scripts'
+export PATH="/SAPDevelop/bin/maven/3.6.1/bin:$PATH"
+export PATH="/SAPDevelop/bin/nodejs/10.15.0/bin:$PATH"
+export PATH="/home/i508082/bin:$PATH"
+export PYTHON2_EXE="/usr/bin/python2"
+alias gitaddi='python /SAPDevelop/scripts/git_add_i.py'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
