@@ -1,17 +1,24 @@
 # Format input line and show git branch
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
 }
-export PS1="\t \u@\h \[\033[32m\]\w\[\033[35m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\t \[\033[32m\]\w\[\033[35m\]\$(parse_git_branch)\[\033[00m\] |> "
+
 export TERM=xterm-256color
 
 alias gitcred='git config credential.helper store'
-alias gitc='git commit -m '
-alias gita='git add -A'
-alias gits='git status'
-alias gitac='git add -A; git commit -m '
-alias gitls='git log --format=short'
-alias gitt='git log --graph --pretty=oneline --abbrev-commit'
+alias gc='git commit -m '
+alias ga='git add -A'
+alias gs='git status'
+alias gac='git add -A; git commit -m '
+alias gl='git log --format=short'
+alias gt='git log --graph --pretty=oneline --abbrev-commit'
+alias lg='lazygit'
+
+alias vi='nvim'
+alias vim='nvim'
+alias deprecated_vi='/usr/bin/vi'
+alias deprecated_vim='/usr/bin/vim'
 
 gitacp() {
     git add -A
@@ -41,3 +48,4 @@ alias show='vim - -R -m -M'
 
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
+
